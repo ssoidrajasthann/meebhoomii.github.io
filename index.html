@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MeeBhoomi AP | Adangal, 1-B, FMB & Village Maps @meebhoomi.ap.gov.in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="MeeBhoomi (మీభూమి) is the official digital land records portal of the Government of Andhra Pradesh (AP), managed by the Department of Revenue.">
+  <meta name="keywords" content="MeeBhoomi, meebhoomi ap, your adangal, ror 1b, village map ap, meebhoomi adangal, fmb, land records andhra pradesh, meebhoomi login, meebhoomi Passbook, webland">
+
+  <link rel="icon" href="/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Smooth Scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #222;
+    }
+
+    /* Header & Footer - AP Govt Blue Theme */
+    .bg-custom {
+      background-color: #003366; /* Deep Blue for AP Portal look */
+    }
+    .navbar-brand {
+      padding-left: 10px;
+    }
+    .dropdown-menu {
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    header a,
+    footer,
+    footer a {
+      color: #ffffff !important;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown menu fix */
+    .dropdown-menu {
+      background-color: #003366;
+      border: none;
+    }
+
+    .dropdown-item {
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: #f39c12; /* Accent Orange */
+      color: #ffffff;
+    }
+
+    /* Mobile-specific spacing */
+    @media (max-width: 991.98px) {
+        .navbar-brand { padding-left: 20px !important; }
+        .navbar-toggler { margin-right: 15px !important; }
+        .navbar-collapse { padding: 0 25px 15px; }
+        .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
+    }
+
+    /* Service Buttons */
+    .service-btn {
+      width: 100%;
+      background-color: #003366;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      transition: 0.3s;
+    }
+
+    .service-btn:hover {
+      background-color: #f39c12;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    
+   h1, h2, h3 {
+    font-weight: bold;
+    text-align: center;
+    color: #003366;
+    margin-top: 30px;
+   }
+
+    footer { font-size: 14px; }
+    
+    /* Blog Images */
+    .blog-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .blog-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+        
+    /* Data Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    th, td { border: 1px solid #ddd; padding: 12px; }
+    th { background-color: #003366; color: white; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    tr:hover { background-color: #f1f1f1; }
+  </style>
+</head>
+
+<body>
+
+<header class="bg-custom">
+  <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+    <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
+      MeeBhoomi
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Adangal Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Your Adangal</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village Adangal</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
+            ROR 1-B Records
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Your 1-B Record</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village 1-B</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
+             Maps & FMB
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Field Measurement Book (FMB)</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village Maps</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+<div class="container-fluid my-4">
+
+  <h1>MeeBhoomi</h1>
+  <p>
+    <strong>MeeBhoomi</strong> (translating to "Your Land") is the official digital land records repository launched by the Government of Andhra Pradesh in June 2015. 
+    It serves as a transparent interface for citizens to access critical documents like the <strong>Adangal</strong> and <strong>Record of Rights (1-B)</strong> without visiting the Tahsildar's office.
+  </p>
+
+  <p>
+    The portal digitizes land data across all 26 districts of Andhra Pradesh, allowing landowners to verify ownership details, check crop data, and even link their Aadhaar numbers to their survey numbers for added security.
+   
+  </p>
+
+ <h2 id="dashboard" style="padding-top: 60px; margin-top: -30px;">Online Services Dashboard</h2>
+  <div class="row g-3 mb-4">
+    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank">MeeBhoomi Portal</a></div>
+    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank">Your Adangal</a></div>
+    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank">Your 1-B (ROR)</a></div>
+    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank">FMB (Village Map)</a></div>
+    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank">Aadhaar Linking</a></div>
+    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank">Search by Name</a></div>
+ </div>
+    
+ <table>
+      <thead>
+        <tr>
+          <th width="30%">Feature</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Portal Name</strong></td>
+          <td>MeeBhoomi AP (మీభూಮಿ)</td>
+        </tr>
+        <tr>
+          <td><strong>Managed By</strong></td>
+          <td>Department of Revenue, Govt of Andhra Pradesh</td>
+        </tr>
+        <tr>
+          <td><strong>Core Documents</strong></td>
+          <td>Adangal (Pahani), ROR 1-B, FMB</td>
+        </tr>
+        <tr>
+          <td><strong>Languages</strong></td>
+          <td>Telugu & English</td>
+        </tr>
+        <tr>
+          <td><strong>Key Services</strong></td>
+          <td>
+             <ul style="margin: 0; padding-left: 20px;">
+              <li>Electronic Passbook Download</li>
+              <li>Village Map Viewing</li>
+              <li>Aadhaar Seeding Status</li>
+              <li>Land Conversion Status</li>
+            </ul>
+          </td>
+        </tr>
+          <tr>
+          <td><strong>Official URL</strong></td>
+          <td><a href="http://meebhoomi.ap.gov.in" target="_blank">meebhoomi.ap.gov.in</a></td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+<h1>Understanding Key MeeBhoomi Documents</h1>
+
+<h3>1. What is Adangal (Pahani)?</h3>
+<p>
+    The <strong>Adangal</strong> (also known as Pahani in other states) is the primary land record maintained by the Village Revenue Officer. It contains:
+</p>
+<div class="blog-image">
+    <img src="adangal.png" alt="Sample of MeeBhoomi Adangal Pahani Document" width="600" height="350">
+</div>
+<ul>
+  <li><strong>Owner Details:</strong> Name of the landholder.</li>
+  <li><strong>Land Type:</strong> Classification of soil and land nature (Wet/Dry).</li>
+  <li><strong>Cultivation:</strong> Crops grown, water sources, and yield estimation.</li>
+  <li><strong>Liabilities:</strong> Details of existing loans or mortgages on the land.</li>
+</ul>
+
+<h3>2. What is ROR 1-B?</h3>
+<p>
+    The <strong>Record of Rights (1-B)</strong> is the legal proof of land ownership. Unlike the Adangal which focuses on cultivation, the 1-B is strictly an ownership title record used for:
+</p>
+<div class="blog-image">
+    <img src="ror.png" alt="Sample of MeeBhoomi Adangal Pahani Document" width="600" height="350">
+</div>
+<ul>
+  <li>Obtaining bank loans.</li>
+  <li>Property registration and sales.</li>
+  <li>Legal disputes in court.</li>
+</ul>
+
+<h3>3. Field Measurement Book (FMB)</h3>
+<p>
+    The FMB contains the sketch of land boundaries as per official survey records.
+    It is crucial for resolving boundary disputes between neighbors. The MeeBhoomi portal allows you to download these sketches digitally.
+</p>
+<div class="blog-image">
+    <img src="field.png" alt="Sample of MeeBhoomi Adangal Pahani Document" width="600" height="350">
+</div>
+
+<h2>How to Download Your Adangal Online</h2>
+<p>
+    Follow these steps to view your land details on the official portal:
+</p>
+<div class="blog-image">
+    <img src="downloadadangal.png" alt="Sample of MeeBhoomi Adangal Pahani Document" width="600" height="350">
+</div>
+<ol>
+  <li><strong>Visit the Portal:</strong> Go to <a href="http://meebhoomi.ap.gov.in">meebhoomi.ap.gov.in</a>.</li>
+  <li><strong>Select 'Adangal':</strong> In the menu, choose "Your Adangal" (Personal) or "Village Adangal" (Public).</li>
+  
+  <li><strong>Enter Location Details:</strong> Select your District, Mandal, and Village from the dropdowns.</li>
+  <li><strong>Search Method:</strong> You can search using:
+    <ul style="list-style-type: disc;">
+        <li>Survey Number</li>
+        <li>Account (Khata) Number</li>
+        <li>Aadhaar Number</li>
+        <li>Pattadar Name</li>
+    </ul>
+  </li>
+  <li><strong>Verify & Submit:</strong> Enter the Captcha code and click "Click" to generate the report.</li>
+</ol>
+
+<h2>How to Link Aadhaar with Land Records</h2>
+<p>
+    Linking Aadhaar prevents fraudulent transactions. To check your status:
+</p>
+<div class="blog-image">
+    <img src="aadhaar.jpg" alt="Sample of MeeBhoomi Adangal Pahani Document" width="600" height="350">
+</div>
+<ol>
+  <li>Go to the "Aadhaar/Other Identities" menu.</li>
+  <li>Select "Aadhaar Linking".</li>
+  <li>Enter the District, Zone, Village, and Account Number.</li>
+  <li>The system will display if your KYC is completed or pending.</li>
+</ol>
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<p><strong>What is the difference between Adangal and 1-B?</strong><br>
+Adangal provides cultivation and land nature details, while 1-B acts as the legal title deed proving ownership.</p>
+
+<p><strong>Can I use the downloaded Adangal for bank loans?</strong><br>
+Yes, the electronically signed Adangal and 1-B records from MeeBhoomi are valid for loan processing and official verification.</p>
+
+<p><strong>How do I fix errors in my land records?</strong><br>
+You can file a complaint directly on the portal under the "Complaints" section or visit the nearest MeeSeva center to request a correction.</p>
+
+<p><strong>Is the FMB sketch available for all villages?</strong><br>
+FMB sketches are being digitized progressively. If your village map is not available online, you must visit the Mandal Revenue Office (MRO).</p>
+
+</div>
+</main>
+
+<footer class="bg-custom text-center py-3">
+  <div class="container">
+      <p><strong>Disclaimer:</strong> This website amis to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+    <div class="mb-2">
+      <a href="https://meebhoomiap.in">Home</a> |
+      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+    </div>
+    <div>
+      © 2025 MeeBhoomi Portal
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
