@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webland AP : Land Records Management in Andhra Pradesh @webland.ap.gov.in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Smooth Scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #222;
+    }
+
+    /* Header & Footer - AP Govt Blue Theme */
+    .bg-custom {
+      background-color: #003366; /* Deep Blue for AP Portal look */
+    }
+    .navbar-brand {
+      padding-left: 10px;
+    }
+    .dropdown-menu {
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    header a,
+    footer,
+    footer a {
+      color: #ffffff !important;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown menu fix */
+    .dropdown-menu {
+      background-color: #003366;
+      border: none;
+    }
+
+    .dropdown-item {
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: #f39c12; /* Accent Orange */
+      color: #ffffff;
+    }
+
+    /* Mobile-specific spacing */
+    @media (max-width: 991.98px) {
+        .navbar-brand { padding-left: 20px !important; }
+        .navbar-toggler { margin-right: 15px !important; }
+        .navbar-collapse { padding: 0 25px 15px; }
+        .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
+    }
+
+    /* Service Buttons */
+    .service-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff !important; /* Ensures text stays white */
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;        /* Increased size */
+    font-size: 1.1rem;         /* Slightly larger text */
+    text-decoration: none;     /* Removes underline */
+    transition: 0.3s;
+    border-radius: 5px;        /* Optional: adds slight curve */
+    white-space: nowrap;       /* Keeps text on one line */
+}
+
+.service-btn:hover {
+    background-color: #f39c12;
+    color: #ffffff !important;
+    text-decoration: none;     /* Keeps underline off on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+    
+   h1, h2, h3 {
+    font-weight: bold;
+    text-align: center;
+    color: #003366;
+    margin-top: 30px;
+   }
+
+    footer { font-size: 14px; }
+    
+    /* Blog Images */
+    .blog-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .blog-image img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+        
+    /* Data Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    th, td { border: 1px solid #ddd; padding: 12px; }
+    th { background-color: #f4f4f4; color: #003366; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    tr:hover { background-color: #f1f1f1; }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="bg-custom">
+  <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+    <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
+      MeeBhoomi
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Adangal Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View Adangal</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Land Dispute</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
+            ROFR 1-B Records
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View 1-B Record</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village ROFR</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
+             Maps & FMB
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Field Measurement Book (FMB)</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village Maps</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+<div class="container-fluid my-4">
+    
+            <h1>Webland AP : Land Records Management in Andhra Pradesh @webland.ap.gov.in</h1>
+            
+            <p>When searching for land records in Andhra Pradesh, you will often hear two names: <strong>Meebhoomi</strong> and <strong>Webland</strong>. While Meebhoomi is famous among the general public, Webland AP is the silent engine running the entire system.</p>
+            
+            <p>Webland is the centralized database where the actual "record of truth" lives. It is the portal used by government officials (Revenue Department) to digitally sign, update, and secure your land data.</p>
+            
+            <div class="alert-custom">
+                <p><strong>In this guide:</strong> we will decode what Webland AP is, how it powers your property rights, and the crucial differences between Webland and Meebhoomi.</p>
+            </div>
+
+            <h2>What is Webland AP?</h2>
+            <p>Webland AP (webland.ap.gov.in) is the core land records management system designed by the CCLA (Chief Commissioner of Land Administration). Its primary goal is to maintain a digitally signed, tamper-proof database of all land parcels in the state.</p>
+            
+            <p>Unlike the paper records of the past, Webland ensures that:</p>
+            <ul>
+                <li>Every survey number is digitized.</li>
+                <li>Land records are "seeded" with Aadhaar numbers to prevent fraud.</li>
+                <li>The FMB (Field Measurement Book) and Adangal are synchronized.</li>
+            </ul>
+            <div class="row g-3 mb-4 justify-content-center">
+    <div class="col-auto">
+        <a class="btn service-btn" href="https://webland.ap.gov.in/" target="_blank" rel="noopener noreferrer">Webland AP</a>
+    </div>
+</div>
+
+            <div class="text-center my-4">
+               </div>
+
+            <h3>The "Single Source of Truth"</h3>
+            <p>In Andhra Pradesh, if a land record does not exist on Webland, it effectively does not exist in the eyes of the digital government. Banks, registration offices, and loan sanctioning authorities all query the Webland database to verify ownership.</p>
+
+            <h2>The Critical Difference: Webland vs. Meebhoomi</h2>
+            <p>This is the most common confusion among landowners. Here is the breakdown:</p>
+            
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th width="20%">Feature</th>
+                            <th width="40%">Webland AP</th>
+                            <th width="40%">Meebhoomi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Primary User</strong></td>
+                            <td>Government Officials (Tahsildars, VROs)</td>
+                            <td>Citizens (Landowners, Public)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Purpose</strong></td>
+                            <td>To Edit, Update, and Approve records.</td>
+                            <td>To View and Download records.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Access</strong></td>
+                            <td>Restricted (Requires Official Login ID).</td>
+                            <td>Open (Public Search).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Function</strong></td>
+                            <td>Processing Mutations, POLR, Aadhaar Seeding.</td>
+                            <td>Viewing Adangal, 1-B, and FMB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="alert-custom">
+                <strong>Analogy:</strong> Think of Webland as the bank's internal computer system where they update your balance. Think of Meebhoomi as your ATM or Net Banking app where you just check your balance.
+            </div>
+
+            <h2>Key Services Managed on Webland</h2>
+            <p>While citizens cannot log in directly, the actions taken on Webland directly affect you. Here is what happens inside the portal:</p>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 bg-light">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">1. Land Mutation (Transfer of Ownership)</h3>
+                            <p class="card-text small">When you buy land and apply for a mutation at a MeeSeva center, the request is sent to the Webland portal. The Tahsildar logs in, verifies your documents, and digitally approves the change. Once approved on Webland, the name change automatically reflects on Meebhoomi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 bg-light">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">2. Aadhaar Seeding</h3>
+                            <p class="card-text small">Officials use Webland to link your Aadhaar card to your Khata/Survey number. This is mandatory for selling land or receiving government benefits like Rythu Bharosa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 bg-light">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">3. POLR (Purification of Land Records)</h3>
+                            <p class="card-text small">This is a massive ongoing project to correct errors in land records. Revenue officers use Webland to fix mismatched names, wrong extents (area measurements), and "Notional Khata" issues.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 bg-light">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">4. Issuing E-Pattadar Passbooks</h3>
+                            <p class="card-text small">The digital passbook you download is generated only after the data is verified and "locked" inside Webland.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>How to Check Your Land Status (For Citizens)</h2>
+            <p>Since you cannot log into Webland without official credentials, how do you verify your data?</p>
+
+            <h3>Step 1: Use the "Public View" on Meebhoomi</h3>
+            <p>Always check Meebhoomi first. If your name appears there, it means your record is active in Webland.</p>
+
+            <h3>Step 2: Check Mutation Status</h3>
+            <p>If you have applied for a mutation:</p>
+            <ol>
+                <li>Visit the Meebhoomi portal.</li>
+                <li>Click on <strong>"Mutation Status"</strong> (often under the "Your Application" tab).</li>
+                <li>Enter your Application Number (from MeeSeva).</li>
+                <li>If the status says <strong>"Approved,"</strong> it means the Webland database has been updated.</li>
+            </ol>
+
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div>
+                <div>
+                    <div><strong>Q: Can I register a personal account on Webland AP?</strong></div>
+                    <div>A: No. The Webland login page is strictly for Revenue Department employees (VROs, RI, Tahsildars). Citizens should use the Meebhoomi portal.</div>
+                </div>
+
+                <div>
+                    <div><strong>Q: My land details are wrong on Meebhoomi. How do I fix them on Webland?</strong></div>
+                    <div>A: You cannot fix them yourself. You must file a grievance (Online via Spandana or offline at the Tahsildar office). The VRO will then physically verify your land and correct the entry in the Webland login.</div>
+                </div>
+
+                <div>
+                    <div><strong>Q: What is a "Webland Not Signed" error?</strong></div>
+                    <div>A: This means your record exists in the system but lacks the Digital Signature of the Tahsildar. An unsigned record is not valid for loans or registration. You must approach the MRO office to get it digitally signed.</div>
+                </div>
+            </div>
+
+</div>
+</main>
+<footer class="bg-custom text-center py-3">
+  <div class="container">
+      <p><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+    <div class="mb-2">
+      <a href="https://meebhoomiap.in">Home</a> |
+      <a href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha AP</a> |
+      <a href="https://meebhoomiap.in/webland.html">Webland AP</a>
+      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+    </div>
+    <div>
+      © 2026 MeeBhoomi Portal
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
