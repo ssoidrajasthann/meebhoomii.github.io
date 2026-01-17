@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>About Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="icon" href="/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,6 +29,8 @@
       margin-left: 10px;
       padding-left: 10px;
       padding-right: 10px;
+      background-color: #003366;
+      border: none;
     }
 
     header a,
@@ -44,12 +45,6 @@
       text-decoration: underline;
     }
 
-    /* Dropdown menu fix */
-    .dropdown-menu {
-      background-color: #003366;
-      border: none;
-    }
-
     .dropdown-item {
       color: #ffffff;
       font-weight: bold;
@@ -62,6 +57,43 @@
       color: #ffffff;
     }
 
+    /* --- TRANSLATE BAR STYLES --- */
+    .translate-bar {
+        background-color: #e9ecef;
+        padding: 10px 0;
+        border-bottom: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    .lang-btn {
+        border: 2px solid #003366;
+        background: #ffffff;
+        color: #003366;
+        font-weight: bold;
+        padding: 6px 20px;
+        border-radius: 25px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+        background-color: #003366;
+        color: white;
+    }
+
+    /* LANGUAGE TOGGLE LOGIC */
+    .lang-te { display: none; } 
+    body.show-telugu .lang-en { display: none !important; }
+    body.show-telugu .lang-te { display: inline; }
+    body.show-telugu div.lang-te, 
+    body.show-telugu p.lang-te,
+    body.show-telugu h1.lang-te,
+    body.show-telugu h2.lang-te,
+    body.show-telugu h3.lang-te,
+    body.show-telugu ul.lang-te,
+    body.show-telugu ol.lang-te { display: block; }
+
     /* Mobile-specific spacing */
     @media (max-width: 991.98px) {
         .navbar-brand { padding-left: 20px !important; }
@@ -70,60 +102,44 @@
         .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
     }
 
-    /* Service Buttons */
+    /* --- REVERTED SERVICE BUTTONS (OLD STYLE) --- */
     .service-btn {
       width: 100%;
       background-color: #003366;
-      color: #ffffff;
+      color: #ffffff !important;
       font-weight: bold;
       border: none;
       padding: 12px;
       transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
     }
 
     .service-btn:hover {
       background-color: #f39c12;
-      color: #ffffff;
+      color: #ffffff !important;
       transform: translateY(-2px);
+      text-decoration: none;
     }
     
-   h1, h2, h3 {
-    font-weight: bold;
-    text-align: center;
-    color: #003366;
-    margin-top: 30px;
-   }
+    h1, h2, h3 {
+     font-weight: bold;
+     text-align: center;
+     color: #003366;
+     margin-top: 30px;
+    }
 
     footer { font-size: 14px; }
     
-    /* Blog Images */
-    .blog-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
+    .contact-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      border-left: 5px solid #003366;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 30px 0;
     }
-
-    .blog-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-        
-    /* Data Tables */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        font-size: 16px;
-        text-align: left;
-    }
-
-    th, td { border: 1px solid #ddd; padding: 12px; }
-    th { background-color: #003366; color: white; }
-    tr:nth-child(even) { background-color: #f9f9f9; }
-    tr:hover { background-color: #f1f1f1; }
   </style>
 </head>
 
@@ -134,95 +150,132 @@
     <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
       MeeBhoomi
     </a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Adangal Services
+            <span class="lang-en">Adangal Services</span>
+            <span class="lang-te">అడంగల్ సేవలు</span>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Your Adangal</a></li>
             <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village Adangal</a></li>
           </ul>
         </li>
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            ROR 1-B Records
+            <span class="lang-en">ROR 1-B Records</span>
+            <span class="lang-te">ROR 1-B రికార్డులు</span>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Your 1-B Record</a></li>
             <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village 1-B</a></li>
           </ul>
         </li>
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-             Maps & FMB
+            <span class="lang-en">Maps & FMB</span>
+            <span class="lang-te">మ్యాప్స్ & FMB</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Field Measurement Book (FMB)</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">FMB Sketch</a></li>
             <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village Maps</a></li>
           </ul>
         </li>
-
       </ul>
     </div>
   </nav>
 </header>
 
+<div class="translate-bar">
+    <button class="lang-btn" onclick="toggleLanguage()">
+        <span class="lang-en">Translate to తెలుగు (Telugu)</span>
+        <span class="lang-te">English లో చదవండి</span>
+    </button>
+</div>
+
 <main id="main-content">
 <div class="container-fluid my-4">
-        <h1>About Us</h1>
-        <p>
+        <h1 class="lang-en">About Us</h1>
+        <h1 class="lang-te">మా గురించి</h1>
+
+        <p class="lang-en">
           Welcome to the <strong>MeeBhoomi Portal</strong>. We are an independent educational resource dedicated to helping the residents of Andhra Pradesh navigate the complexities of digital land records. Our mission is to bridge the gap between complex government systems and the common citizen by providing clear, step-by-step guides.
         </p>
-
-        <h2>Our Mission</h2>
-        <p>
-          In 2015, the Government of Andhra Pradesh revolutionized land administration with the launch of the MeeBhoomi portal. However, many users still find it challenging to access specific documents like <strong>Your Adangal</strong> or <strong>ROR 1-B</strong>. We strive to provide:
+        <p class="lang-te">
+          <strong>మీభూమి పోర్టల్‌</strong>కు స్వాగతం. మేము ఆంధ్రప్రదేశ్ నివాసితులకు డిజిటల్ భూ రికార్డుల వినియోగంలో సహాయపడటానికి అంకితమైన ఒక స్వతంత్ర విద్యా వనరు. సంక్లిష్టమైన ప్రభుత్వ వ్యవస్థలకు మరియు సామాన్య పౌరులకు మధ్య వారధిగా ఉంటూ, స్పష్టమైన గైడ్‌లను అందించడమే మా లక్ష్యం.
         </p>
-        <ul>
+
+        <h2 class="lang-en">Our Mission</h2>
+        <h2 class="lang-te">మా లక్ష్యం</h2>
+        
+        <p class="lang-en">In 2015, the Government of Andhra Pradesh revolutionized land administration with the launch of the MeeBhoomi portal. However, many users still find it challenging to access specific documents like Your Adangal or ROR 1-B. We strive to provide:</p>
+        <p class="lang-te">2015లో, ఆంధ్రప్రదేశ్ ప్రభుత్వం మీభూమి పోర్టల్‌ను ప్రారంభించడం ద్వారా భూ పరిపాలనలో విప్లవాత్మక మార్పులు తీసుకువచ్చింది. అయితే, చాలా మంది వినియోగదారులు మీ అడంగల్ లేదా ROR 1-B వంటి నిర్దిష్ట పత్రాలను పొందడంలో ఇప్పటికీ ఇబ్బందులు ఎదుర్కొంటున్నారు. మేము ఈ క్రింది వాటిని అందించడానికి కృషి చేస్తాము:</p>
+        
+        <ul class="lang-en">
           <li><strong>Easy Navigation:</strong> Simplified links to official government services.</li>
           <li><strong>Accurate Information:</strong> In-depth explanations of land terminology (FMB, Khata, Pattadar).</li>
           <li><strong>Security Awareness:</strong> Guidance on how to link Aadhaar with land records to prevent fraud.</li>
         </ul>
+        <ul class="lang-te">
+          <li><strong>సులభమైన నావిగేషన్:</strong> అధికారిక ప్రభుత్వ సేవలకు సరళమైన లింకులు.</li>
+          <li><strong>ఖచ్చితమైన సమాచారం:</strong> భూమి సంబంధిత పదజాలం (FMB, ఖాతా, పట్టాదారు) పై లోతైన వివరణలు.</li>
+          <li><strong>భద్రతపై అవగాహన:</strong> మోసాలను నివారించడానికి ఆధార్‌ను భూ రికార్డులతో ఎలా అనుసంధానించాలనే దానిపై మార్గదర్శకత్వం.</li>
+        </ul>
 
         <div class="contact-box">
-          <h3>Need Assistance?</h3>
-          <p>
+          <h3 class="lang-en">Need Assistance?</h3>
+          <h3 class="lang-te">సహాయం కావాలా?</h3>
+          <p class="lang-en">
             Whether you are having trouble finding a survey number or need clarification on a specific land record terminology, our team is here to help. Please note that we are an informational guide and do not have the authority to modify official records.
           </p>
+          <p class="lang-te">
+            మీరు సర్వే నంబర్‌ను కనుగొనడంలో ఇబ్బంది పడుతున్నారా లేదా నిర్దిష్ట భూమి రికార్డు పరిభాషపై స్పష్టత అవసరమైతే, మా బృందం మీకు సహాయం చేయడానికి ఇక్కడ ఉంది. దయచేసి మేము సమాచార మార్గదర్శి అని మరియు అధికారిక రికార్డులను సవరించే అధికారం మాకు లేదని గమనించండి.
+          </p>
           <p><strong>Contact us via email:</strong><br>
-          <a href="mailto:meebhoomiportalhelp@gmail.com" class="email-link">meebhoomiportalhelp@gmail.com</a></p>
+          <a href="mailto:meebhoomiportalhelp@gmail.com">meebhoomiportalhelp@gmail.com</a></p>
         </div>
 
-        <h2 class="mt-5">Why Use Digital Records?</h2>
-        <p>
-          Accessing your records digitally through MeeBhoomi ensures transparency and provides you with a legal document that can be used for bank loans, agricultural subsidies, and property verification. We encourage every landowner in AP to check their records regularly to ensure accuracy.
+        <h2 class="lang-en mt-5">Why Use Digital Records?</h2>
+        <h2 class="lang-te mt-5">డిజిటల్ రికార్డులను ఎందుకు ఉపయోగించాలి?</h2>
+        <p class="lang-en">
+          Accessing your records digitally through MeeBhoomi ensures transparency and provides you with a legal document that can be used for bank loans, agricultural subsidies, and property verification.We encourage every landowner in AP to check their records regularly to ensure accuracy.
         </p>
-      </div>
+        <p class="lang-te">
+          మీభూమి ద్వారా మీ రికార్డులను డిజిటల్‌గా పొందడం పారదర్శకతను నిర్ధారిస్తుంది. ఇది బ్యాంకు రుణాలు, వ్యవసాయ రాయితీలు మరియు ఆస్తి ధృవీకరణ కోసం ఉపయోగపడే చట్టపరమైన పత్రంగా పనిచేస్తుంది.ఖచ్చితత్వాన్ని నిర్ధారించుకోవడానికి APలోని ప్రతి భూ యజమాని వారి రికార్డులను క్రమం తప్పకుండా తనిఖీ చేయాలని మేము ప్రోత్సహిస్తున్నాము.
+        </p>
     </div>
-  </div>
 </main>
 
 <footer class="bg-custom text-center py-3">
   <div class="container">
-      <p><strong>Disclaimer:</strong> This website amis to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-en"><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-te"><strong>గమనిక:</strong> ఈ వెబ్‌సైట్ మీభూమి గురించి సమాచారాన్ని అందించడమే లక్ష్యంగా పెట్టుకుంది. మాకు ఆంధ్రప్రదేశ్ ప్రభుత్వంతో సంబంధం లేదు. ఈ వెబ్‌సైట్ ప్రజా సౌకర్యార్థం రూపొందించబడింది.</p>
+      
     <div class="mb-2">
-      <a href="https://meebhoomiap.in">Home</a> |
-      <a href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha AP</a> |
-      <a href="https://meebhoomiap.in/webland.html">Webland AP</a> |
-      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
-      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+      <a href="https://meebhoomiap.in">
+          <span class="lang-en">Home</span>
+          <span class="lang-te">హోమ్</span>
+      </a> |
+      <a href="https://meebhoomiap.in/bhunaksha.html">
+          <span class="lang-en">Bhu Naksha AP</span>
+          <span class="lang-te">భూ నక్ష AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/webland.html">
+          <span class="lang-en">Webland AP</span>
+          <span class="lang-te">వెబ్‌ల్యాండ్ AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/about-us.html">
+          <span class="lang-en">About Us</span>
+          <span class="lang-te">మా గురించి</span>
+      </a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">
+          <span class="lang-en">Privacy Policy</span>
+          <span class="lang-te">ప్రైవసీ పాలసీ</span>
+      </a>
     </div>
     <div>
       © 2026 MeeBhoomi Portal
@@ -232,9 +285,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    function toggleLanguage() {
+        // Toggle the class on the body
+        document.body.classList.toggle('show-telugu');
+    }
+</script>
+
 </body>
-
 </html>
-
-
-
