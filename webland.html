@@ -130,6 +130,62 @@
     th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
+
+    /* LANGUAGE TOGGLE STYLES */
+    .lang-te { display: none; } /* Hide Telugu by default */
+    
+    /* When body has class 'show-telugu', hide English and show Telugu */
+    body.show-telugu .lang-en { display: none !important; }
+    body.show-telugu .lang-te { display: inline; }
+    body.show-telugu div.lang-te, 
+    body.show-telugu p.lang-te,
+    body.show-telugu h1.lang-te,
+    body.show-telugu h2.lang-te,
+    body.show-telugu h3.lang-te,
+    body.show-telugu ul.lang-te,
+    body.show-telugu ol.lang-te { display: block; }
+    
+    /* Title Container for positioning toggle */
+    .title-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .lang-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid #003366;
+        background: transparent;
+        color: #003366;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .lang-btn:hover {
+        background-color: #003366;
+        color: white;
+    }
+    @media (max-width: 768px) {
+        .title-container {
+            flex-direction: column;
+        }
+        .lang-btn {
+            position: relative;
+            transform: none;
+            margin-top: 10px;
+            right: auto;
+        }
+    }
+
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
      crossorigin="anonymous"></script>
@@ -140,7 +196,8 @@
 <header class="bg-custom">
   <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
     <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
-      MeeBhoomi
+      <span class="lang-en">MeeBhoomi</span>
+      <span class="lang-te">మీభూమి</span>
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -154,31 +211,52 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Adangal Services
+            <span class="lang-en">Adangal Services</span>
+            <span class="lang-te">అడంగల్ సేవలు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View Adangal</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Land Dispute</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">View Adangal</span>
+                <span class="lang-te">మీ అడంగల్</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Land Dispute</span>
+                <span class="lang-te">భూ వివాదాలు</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            ROFR 1-B Records
+            <span class="lang-en">ROFR 1-B Records</span>
+            <span class="lang-te">1-B రికార్డులు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View 1-B Record</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village ROFR</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">View 1-B Record</span>
+                <span class="lang-te">1-B రికార్డు చూడండి</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Village ROFR</span>
+                <span class="lang-te">గ్రామ 1-B</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-             Maps & FMB
+             <span class="lang-en">Maps & FMB</span>
+             <span class="lang-te">మ్యాప్స్ & FMB</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Field Measurement Book (FMB)</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village Maps</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Field Measurement Book (FMB)</span>
+                <span class="lang-te">F.M.B (భూమి కొలతలు)</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Village Maps</span>
+                <span class="lang-te">గ్రామ పటాలు</span>
+            </a></li>
           </ul>
         </li>
 
@@ -190,146 +268,263 @@
 <main id="main-content">
 <div class="container-fluid my-4">
     
-            <h1>Webland AP : Land Records Management in Andhra Pradesh</h1>
+    <div class="title-container">
+        <h1 class="lang-en">Webland AP : Land Records Management in Andhra Pradesh</h1>
+        <h1 class="lang-te">వెబ్‌ల్యాండ్ AP: ఆంధ్రప్రదేశ్‌లో భూ రికార్డుల నిర్వహణ</h1>
+        
+        <button class="lang-btn" onclick="toggleLanguage()">
+            <span class="lang-en">తెలుగులో చూడండి</span>
+            <span class="lang-te">View in English</span>
+        </button>
+    </div>
             
-            <p>When searching for land records in Andhra Pradesh, you will often hear two names: <strong>Meebhoomi</strong> and <strong>Webland</strong>. While Meebhoomi is famous among the general public, Webland AP is the silent engine running the entire system.</p>
+            <p class="lang-en">When searching for land records in Andhra Pradesh, you will often hear two names: <strong>Meebhoomi</strong> and <strong>Webland</strong>. While Meebhoomi is famous among the general public, Webland AP is the silent engine running the entire system.</p>
+            <p class="lang-te">ఆంధ్రప్రదేశ్‌లో భూ రికార్డుల కోసం వెతికేటప్పుడు, మీరు తరచుగా రెండు పేర్లను వింటారు: <strong>మీభూమి (Meebhoomi)</strong> మరియు <strong>వెబ్‌ల్యాండ్ (Webland)</strong>. మీభూమి సాధారణ ప్రజలకు బాగా తెలిసిన పేరు అయితే, వెబ్‌ల్యాండ్ AP అనేది మొత్తం వ్యవస్థను నడిపించే కీలకమైన ఇంజిన్.</p>
             
-            <p>Webland is the centralized database where the actual "record of truth" lives. It is the portal used by government officials (Revenue Department) to digitally sign, update, and secure your land data.</p>
+            <p class="lang-en">Webland is the centralized database where the actual "record of truth" lives. It is the portal used by government officials (Revenue Department) to digitally sign, update, and secure your land data.</p>
+            <p class="lang-te">వెబ్‌ల్యాండ్ అనేది కేంద్రీకృత డేటాబేస్, ఇక్కడ అసలైన "రికార్డులు" భద్రపరచబడతాయి. ప్రభుత్వ అధికారులు (రెవెన్యూ శాఖ) మీ భూమి డేటాను డిజిటల్‌గా సంతకం చేయడానికి, అప్‌డేట్ చేయడానికి మరియు భద్రపరచడానికి ఈ పోర్టల్‌ను ఉపయోగిస్తారు.</p>
             
             <div class="alert-custom">
-                <p><strong>In this guide:</strong> we will decode what Webland AP is, how it powers your property rights, and the crucial differences between Webland and Meebhoomi.</p>
+                <p class="lang-en"><strong>In this guide:</strong> we will decode what Webland AP is, how it powers your property rights, and the crucial differences between Webland and Meebhoomi.</p>
+                <p class="lang-te"><strong>ఈ గైడ్‌లో:</strong> వెబ్‌ల్యాండ్ AP అంటే ఏమిటి, అది మీ ఆస్తి హక్కులను ఎలా కాపాడుతుంది మరియు వెబ్‌ల్యాండ్, మీభూమి మధ్య ఉన్న ముఖ్యమైన తేడాలను మనం తెలుసుకుందాం.</p>
             </div>
 
-            <h2>What is Webland AP?</h2>
-            <p>Webland AP (webland.ap.gov.in) is the core land records management system designed by the CCLA (Chief Commissioner of Land Administration). Its primary goal is to maintain a digitally signed, tamper-proof database of all land parcels in the state.</p>
+            <h2 class="lang-en">What is Webland AP?</h2>
+            <h2 class="lang-te">వెబ్‌ల్యాండ్ AP అంటే ఏమిటి?</h2>
+
+            <p class="lang-en">Webland AP (webland.ap.gov.in) is the core land records management system designed by the CCLA (Chief Commissioner of Land Administration). Its primary goal is to maintain a digitally signed, tamper-proof database of all land parcels in the state.</p>
+            <p class="lang-te">వెబ్‌ల్యాండ్ AP (webland.ap.gov.in) అనేది CCLA (చీఫ్ కమిషనర్ ఆఫ్ ల్యాండ్ అడ్మినిస్ట్రేషన్) రూపొందించిన ప్రధాన భూ రికార్డుల నిర్వహణ వ్యవస్థ. రాష్ట్రంలోని అన్ని భూముల వివరాలను డిజిటల్ సంతకంతో, ఎవరూ మార్చలేని విధంగా భద్రపరచడమే దీని ప్రధాన లక్ష్యం.</p>
             
-            <p>Unlike the paper records of the past, Webland ensures that:</p>
-            <ul>
+            <p class="lang-en">Unlike the paper records of the past, Webland ensures that:</p>
+            <p class="lang-te">పాతకాలపు పేపర్ రికార్డుల వలె కాకుండా, వెబ్‌ల్యాండ్ వీటిని నిర్ధారిస్తుంది:</p>
+
+            <ul class="lang-en">
                 <li>Every survey number is digitized.</li>
                 <li>Land records are "seeded" with Aadhaar numbers to prevent fraud.</li>
                 <li>The FMB (Field Measurement Book) and Adangal are synchronized.</li>
             </ul>
+            <ul class="lang-te">
+                <li>ప్రతి సర్వే నంబర్ డిజిటలైజ్ చేయబడుతుంది.</li>
+                <li>మోసాలను నిరోధించడానికి భూ రికార్డులు ఆధార్ నంబర్లతో "సీడింగ్" (అనుసంధానం) చేయబడతాయి.</li>
+                <li>FMB (ఫీల్డ్ మెజర్‌మెంట్ బుక్) మరియు అడంగల్ రెండూ ఒకదానితో ఒకటి అనుసంధానించబడి ఉంటాయి.</li>
+            </ul>
+
             <div class="row g-3 mb-4 justify-content-center">
     <div class="col-auto">
-        <a class="btn service-btn" href="https://webland.ap.gov.in/" target="_blank" rel="noopener noreferrer">Webland AP</a>
+        <a class="btn service-btn" href="https://webland.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">Webland AP Portal</span>
+            <span class="lang-te">వెబ్‌ల్యాండ్ AP పోర్టల్</span>
+        </a>
     </div>
 </div>
 
             <div class="text-center my-4">
                </div>
 
-            <h3>The "Single Source of Truth"</h3>
-            <p>In Andhra Pradesh, if a land record does not exist on Webland, it effectively does not exist in the eyes of the digital government. Banks, registration offices, and loan sanctioning authorities all query the Webland database to verify ownership.</p>
+            <h3 class="lang-en">The "Single Source of Truth"</h3>
+            <h3 class="lang-te">"అసలైన రికార్డు" (Single Source of Truth)</h3>
 
-            <h2>The Critical Difference: Webland vs. Meebhoomi</h2>
-            <p>This is the most common confusion among landowners. Here is the breakdown:</p>
+            <p class="lang-en">In Andhra Pradesh, if a land record does not exist on Webland, it effectively does not exist in the eyes of the digital government. Banks, registration offices, and loan sanctioning authorities all query the Webland database to verify ownership.</p>
+            <p class="lang-te">ఆంధ్రప్రదేశ్‌లో, ఒక భూమి రికార్డు వెబ్‌ల్యాండ్‌లో లేకపోతే, డిజిటల్ ప్రభుత్వ రికార్డుల ప్రకారం అది ఉనికిలో లేనట్లే. బ్యాంకులు, రిజిస్ట్రేషన్ కార్యాలయాలు మరియు రుణ మంజూరు అధికారులు యాజమాన్యాన్ని ధృవీకరించడానికి వెబ్‌ల్యాండ్ డేటాబేస్‌నే ఉపయోగిస్తారు.</p>
+
+            <h2 class="lang-en">The Critical Difference: Webland vs. Meebhoomi</h2>
+            <h2 class="lang-te">ముఖ్యమైన తేడా: వెబ్‌ల్యాండ్ vs మీభూమి</h2>
+
+            <p class="lang-en">This is the most common confusion among landowners. Here is the breakdown:</p>
+            <p class="lang-te">భూ యజమానులలో ఇది అత్యంత సాధారణమైన సందేహం. వాటి మధ్య తేడాలు ఇక్కడ ఉన్నాయి:</p>
             
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th width="20%">Feature</th>
+                            <th width="20%">
+                                <span class="lang-en">Feature</span>
+                                <span class="lang-te">లక్షణం</span>
+                            </th>
                             <th width="40%">Webland AP</th>
                             <th width="40%">Meebhoomi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Primary User</strong></td>
-                            <td>Government Officials (Tahsildars, VROs)</td>
-                            <td>Citizens (Landowners, Public)</td>
+                            <td><strong>
+                                <span class="lang-en">Primary User</span>
+                                <span class="lang-te">ప్రధాన వినియోగదారు</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">Government Officials (Tahsildars, VROs)</span>
+                                <span class="lang-te">ప్రభుత్వ అధికారులు (తహసీల్దార్లు, VROలు)</span>
+                            </td>
+                            <td>
+                                <span class="lang-en">Citizens (Landowners, Public)</span>
+                                <span class="lang-te">పౌరులు (భూ యజమానులు, ప్రజలు)</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><strong>Purpose</strong></td>
-                            <td>To Edit, Update, and Approve records.</td>
-                            <td>To View and Download records.</td>
+                            <td><strong>
+                                <span class="lang-en">Purpose</span>
+                                <span class="lang-te">ఉద్దేశ్యం</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">To Edit, Update, and Approve records.</span>
+                                <span class="lang-te">రికార్డులను సవరించడం, అప్‌డేట్ చేయడం మరియు ఆమోదించడం.</span>
+                            </td>
+                            <td>
+                                <span class="lang-en">To View and Download records.</span>
+                                <span class="lang-te">రికార్డులను చూడటం మరియు డౌన్‌లోడ్ చేయడం.</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><strong>Access</strong></td>
-                            <td>Restricted (Requires Official Login ID).</td>
-                            <td>Open (Public Search).</td>
+                            <td><strong>
+                                <span class="lang-en">Access</span>
+                                <span class="lang-te">యాక్సెస్</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">Restricted (Requires Official Login ID).</span>
+                                <span class="lang-te">పరిమితం (అధికారిక లాగిన్ ఐడి అవసరం).</span>
+                            </td>
+                            <td>
+                                <span class="lang-en">Open (Public Search).</span>
+                                <span class="lang-te">అందరికీ అందుబాటులో ఉంటుంది.</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><strong>Function</strong></td>
-                            <td>Processing Mutations, POLR, Aadhaar Seeding.</td>
-                            <td>Viewing Adangal, 1-B, and FMB</td>
+                            <td><strong>
+                                <span class="lang-en">Function</span>
+                                <span class="lang-te">పనితీరు</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">Processing Mutations, POLR, Aadhaar Seeding.</span>
+                                <span class="lang-te">మ్యూటేషన్లు, POLR, ఆధార్ సీడింగ్ ప్రక్రియలు.</span>
+                            </td>
+                            <td>
+                                <span class="lang-en">Viewing Adangal, 1-B, and FMB</span>
+                                <span class="lang-te">అడంగల్, 1-B మరియు FMB చూడటం.</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             
             <div class="alert-custom">
-                <strong>Analogy:</strong> Think of Webland as the bank's internal computer system where they update your balance. Think of Meebhoomi as your ATM or Net Banking app where you just check your balance.
+                <strong class="lang-en">Analogy:</strong> <span class="lang-en">Think of Webland as the bank's internal computer system where they update your balance. Think of Meebhoomi as your ATM or Net Banking app where you just check your balance.</span>
+                <strong class="lang-te">ఉదాహరణ:</strong> <span class="lang-te">వెబ్‌ల్యాండ్‌ను బ్యాంకులోని కంప్యూటర్ సిస్టమ్‌గా భావించండి, అక్కడ వారు మీ బ్యాలెన్స్‌ను అప్‌డేట్ చేస్తారు. మీభూమిని మీ ATM లేదా నెట్ బ్యాంకింగ్ యాప్‌గా భావించండి, అక్కడ మీరు మీ బ్యాలెన్స్‌ను కేవలం తనిఖీ చేసుకుంటారు.</span>
             </div>
 
-            <h2>Key Services Managed on Webland</h2>
-            <p>While citizens cannot log in directly, the actions taken on Webland directly affect you. Here is what happens inside the portal:</p>
+            <h2 class="lang-en">Key Services Managed on Webland</h2>
+            <h2 class="lang-te">వెబ్‌ల్యాండ్‌లో నిర్వహించబడే కీలక సేవలు</h2>
+
+            <p class="lang-en">While citizens cannot log in directly, the actions taken on Webland directly affect you. Here is what happens inside the portal:</p>
+            <p class="lang-te">పౌరులు నేరుగా లాగిన్ కాలేకపోయినా, వెబ్‌ల్యాండ్‌లో జరిగే మార్పులు మిమ్మల్ని నేరుగా ప్రభావితం చేస్తాయి. పోర్టల్ లోపల ఏం జరుగుతుందో ఇక్కడ చూడండి:</p>
 
             <div class="row mt-4">
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 shadow-sm border-0 bg-light">
                         <div class="card-body">
-                            <h3 class="card-title h5 text-primary">1. Land Mutation (Transfer of Ownership)</h3>
-                            <p class="card-text small">When you buy land and apply for a mutation at a MeeSeva center, the request is sent to the Webland portal. The Tahsildar logs in, verifies your documents, and digitally approves the change. Once approved on Webland, the name change automatically reflects on Meebhoomi.</p>
+                            <h3 class="card-title h5 text-primary">
+                                <span class="lang-en">1. Land Mutation (Transfer of Ownership)</span>
+                                <span class="lang-te">1. ల్యాండ్ మ్యూటేషన్ (యాజమాన్య బదిలీ)</span>
+                            </h3>
+                            <p class="card-text small lang-en">When you buy land and apply for a mutation at a MeeSeva center, the request is sent to the Webland portal. The Tahsildar logs in, verifies your documents, and digitally approves the change. Once approved on Webland, the name change automatically reflects on Meebhoomi.</p>
+                            <p class="card-text small lang-te">మీరు భూమిని కొనుగోలు చేసి, మీసేవా కేంద్రంలో మ్యూటేషన్ కోసం దరఖాస్తు చేసినప్పుడు, ఆ అభ్యర్థన వెబ్‌ల్యాండ్ పోర్టల్‌కు వెళ్తుంది. తహసీల్దార్ లాగిన్ అయి, మీ పత్రాలను పరిశీలించి, డిజిటల్ ఆమోదం తెలుపుతారు. వెబ్‌ల్యాండ్‌లో ఆమోదించబడిన తర్వాత, మీభూమిలో పేరు మార్పు ఆటోమేటిక్‌గా కనిపిస్తుంది.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 shadow-sm border-0 bg-light">
                         <div class="card-body">
-                            <h3 class="card-title h5 text-primary">2. Aadhaar Seeding</h3>
-                            <p class="card-text small">Officials use Webland to link your Aadhaar card to your Khata/Survey number. This is mandatory for selling land or receiving government benefits like Rythu Bharosa.</p>
+                            <h3 class="card-title h5 text-primary">
+                                <span class="lang-en">2. Aadhaar Seeding</span>
+                                <span class="lang-te">2. ఆధార్ సీడింగ్</span>
+                            </h3>
+                            <p class="card-text small lang-en">Officials use Webland to link your Aadhaar card to your Khata/Survey number. This is mandatory for selling land or receiving government benefits like Rythu Bharosa.</p>
+                            <p class="card-text small lang-te">అధికారులు మీ ఆధార్ కార్డును మీ ఖాతా/సర్వే నంబర్‌కు లింక్ చేయడానికి వెబ్‌ల్యాండ్‌ను ఉపయోగిస్తారు. భూమిని అమ్మడానికి లేదా రైతు భరోసా వంటి ప్రభుత్వ ప్రయోజనాలను పొందడానికి ఇది తప్పనిసరి.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 shadow-sm border-0 bg-light">
                         <div class="card-body">
-                            <h3 class="card-title h5 text-primary">3. POLR (Purification of Land Records)</h3>
-                            <p class="card-text small">This is a massive ongoing project to correct errors in land records. Revenue officers use Webland to fix mismatched names, wrong extents (area measurements), and "Notional Khata" issues.</p>
+                            <h3 class="card-title h5 text-primary">
+                                <span class="lang-en">3. POLR (Purification of Land Records)</span>
+                                <span class="lang-te">3. POLR (భూ రికార్డుల శుద్దీకరణ)</span>
+                            </h3>
+                            <p class="card-text small lang-en">This is a massive ongoing project to correct errors in land records. Revenue officers use Webland to fix mismatched names, wrong extents (area measurements), and "Notional Khata" issues.</p>
+                            <p class="card-text small lang-te">భూ రికార్డుల్లోని తప్పులను సరిదిద్దడానికి ఇది ఒక భారీ ప్రాజెక్ట్. పేర్లలో తప్పులు, విస్తీర్ణంలో తేడాలు మరియు "నోషనల్ ఖాతా" సమస్యలను పరిష్కరించడానికి రెవెన్యూ అధికారులు వెబ్‌ల్యాండ్‌ను ఉపయోగిస్తారు.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 shadow-sm border-0 bg-light">
                         <div class="card-body">
-                            <h3 class="card-title h5 text-primary">4. Issuing E-Pattadar Passbooks</h3>
-                            <p class="card-text small">The digital passbook you download is generated only after the data is verified and "locked" inside Webland.</p>
+                            <h3 class="card-title h5 text-primary">
+                                <span class="lang-en">4. Issuing E-Pattadar Passbooks</span>
+                                <span class="lang-te">4. E-పట్టాదార్ పాస్‌బుక్‌ల జారీ</span>
+                            </h3>
+                            <p class="card-text small lang-en">The digital passbook you download is generated only after the data is verified and "locked" inside Webland.</p>
+                            <p class="card-text small lang-te">మీరు డౌన్‌లోడ్ చేసుకునే డిజిటల్ పాస్‌బుక్, డేటా వెబ్‌ల్యాండ్‌లో వెరిఫై చేయబడి "లాక్" చేయబడిన తర్వాత మాత్రమే జనరేట్ అవుతుంది.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h2>How to Check Your Land Status (For Citizens)</h2>
-            <p>Since you cannot log into Webland without official credentials, how do you verify your data?</p>
+            <h2 class="lang-en">How to Check Your Land Status (For Citizens)</h2>
+            <h2 class="lang-te">మీ భూమి స్థితిని ఎలా తనిఖీ చేయాలి (పౌరుల కోసం)</h2>
 
-            <h3>Step 1: Use the "Public View" on Meebhoomi</h3>
-            <p>Always check Meebhoomi first. If your name appears there, it means your record is active in Webland.</p>
+            <p class="lang-en">Since you cannot log into Webland without official credentials, how do you verify your data?</p>
+            <p class="lang-te">అధికారిక లాగిన్ లేకుండా మీరు వెబ్‌ల్యాండ్‌లోకి వెళ్లలేరు కాబట్టి, మీ డేటాను ఎలా సరిచూసుకోవాలి?</p>
 
-            <h3>Step 2: Check Mutation Status</h3>
-            <p>If you have applied for a mutation:</p>
-            <ol>
+            <h3 class="lang-en">Step 1: Use the "Public View" on Meebhoomi</h3>
+            <h3 class="lang-te">దశ 1: మీభూమిలో చూడండి</h3>
+
+            <p class="lang-en">Always check Meebhoomi first. If your name appears there, it means your record is active in Webland.</p>
+            <p class="lang-te">ఎల్లప్పుడూ ముందుగా మీభూమిని తనిఖీ చేయండి. అక్కడ మీ పేరు కనిపిస్తే, మీ రికార్డు వెబ్‌ల్యాండ్‌లో యాక్టివ్‌గా ఉన్నట్లే.</p>
+
+            <h3 class="lang-en">Step 2: Check Mutation Status</h3>
+            <h3 class="lang-te">దశ 2: మ్యూటేషన్ స్టేటస్ చెక్ చేయండి</h3>
+
+            <p class="lang-en">If you have applied for a mutation:</p>
+            <p class="lang-te">మీరు మ్యూటేషన్ కోసం దరఖాస్తు చేసి ఉంటే:</p>
+
+            <ol class="lang-en">
                 <li>Visit the Meebhoomi portal.</li>
                 <li>Click on <strong>"Mutation Status"</strong> (often under the "Your Application" tab).</li>
                 <li>Enter your Application Number (from MeeSeva).</li>
                 <li>If the status says <strong>"Approved,"</strong> it means the Webland database has been updated.</li>
             </ol>
+            <ol class="lang-te">
+                <li>మీభూమి పోర్టల్‌ను సందర్శించండి.</li>
+                <li><strong>"Mutation Status"</strong> పై క్లిక్ చేయండి.</li>
+                <li>మీ అప్లికేషన్ నంబర్ (మీసేవా నుండి) నమోదు చేయండి.</li>
+                <li>స్టేటస్ <strong>"Approved"</strong> అని ఉంటే, వెబ్‌ల్యాండ్ డేటాబేస్ అప్‌డేట్ అయినట్లు అర్థం.</li>
+            </ol>
 
-            <h2>Frequently Asked Questions (FAQ)</h2>
+            <h2 class="lang-en">Frequently Asked Questions (FAQ)</h2>
+            <h2 class="lang-te">తరచుగా అడిగే ప్రశ్నలు (FAQ)</h2>
+
             <div>
-                <div>
-                    <div><strong>Q: Can I register a personal account on Webland AP?</strong></div>
-                    <div>A: No. The Webland login page is strictly for Revenue Department employees (VROs, RI, Tahsildars). Citizens should use the Meebhoomi portal.</div>
+                <div class="mb-3">
+                    <div class="lang-en"><strong>Q: Can I register a personal account on Webland AP?</strong></div>
+                    <div class="lang-te"><strong>ప్ర: నేను వెబ్‌ల్యాండ్ APలో వ్యక్తిగత ఖాతాను రిజిస్టర్ చేసుకోవచ్చా?</strong></div>
+                    
+                    <div class="lang-en">A: No. The Webland login page is strictly for Revenue Department employees (VROs, RI, Tahsildars). Citizens should use the Meebhoomi portal.</div>
+                    <div class="lang-te">జ: లేదు. వెబ్‌ల్యాండ్ లాగిన్ పేజీ కేవలం రెవెన్యూ శాఖ ఉద్యోగులకు (VRO, RI, తహసీల్దార్) మాత్రమే. పౌరులు మీభూమి పోర్టల్‌ను ఉపయోగించాలి.</div>
                 </div>
 
-                <div>
-                    <div><strong>Q: My land details are wrong on Meebhoomi. How do I fix them on Webland?</strong></div>
-                    <div>A: You cannot fix them yourself. You must file a grievance (Online via Spandana or offline at the Tahsildar office). The VRO will then physically verify your land and correct the entry in the Webland login.</div>
+                <div class="mb-3">
+                    <div class="lang-en"><strong>Q: My land details are wrong on Meebhoomi. How do I fix them on Webland?</strong></div>
+                    <div class="lang-te"><strong>ప్ర: మీభూమిలో నా భూమి వివరాలు తప్పుగా ఉన్నాయి. వెబ్‌ల్యాండ్‌లో వాటిని ఎలా సరిదిద్దాలి?</strong></div>
+                    
+                    <div class="lang-en">A: You cannot fix them yourself. You must file a grievance (Online via Spandana or offline at the Tahsildar office). The VRO will then physically verify your land and correct the entry in the Webland login.</div>
+                    <div class="lang-te">జ: మీరు వాటిని స్వయంగా సరిదిద్దలేరు. మీరు ఫిర్యాదు (స్పందన ద్వారా ఆన్‌లైన్‌లో లేదా తహసీల్దార్ కార్యాలయంలో ఆఫ్‌లైన్‌లో) చేయాలి. ఆ తర్వాత VRO మీ భూమిని పరిశీలించి వెబ్‌ల్యాండ్ లాగిన్‌లో సరిచేస్తారు.</div>
                 </div>
 
-                <div>
-                    <div><strong>Q: What is a "Webland Not Signed" error?</strong></div>
-                    <div>A: This means your record exists in the system but lacks the Digital Signature of the Tahsildar. An unsigned record is not valid for loans or registration. You must approach the MRO office to get it digitally signed.</div>
+                <div class="mb-3">
+                    <div class="lang-en"><strong>Q: What is a "Webland Not Signed" error?</strong></div>
+                    <div class="lang-te"><strong>ప్ర: "Webland Not Signed" ఎర్రర్ అంటే ఏమిటి?</strong></div>
+                    
+                    <div class="lang-en">A: This means your record exists in the system but lacks the Digital Signature of the Tahsildar. An unsigned record is not valid for loans or registration. You must approach the MRO office to get it digitally signed.</div>
+                    <div class="lang-te">జ: దీని అర్థం మీ రికార్డు సిస్టమ్‌లో ఉంది కానీ తహసీల్దార్ డిజిటల్ సంతకం లేదు. సంతకం లేని రికార్డు రుణాలు లేదా రిజిస్ట్రేషన్‌కు చెల్లదు. మీరు MRO కార్యాలయాన్ని సంప్రదించి డిజిటల్ సంతకం చేయించుకోవాలి.</div>
                 </div>
             </div>
 
@@ -337,13 +532,30 @@
 </main>
 <footer class="bg-custom text-center py-3">
   <div class="container">
-      <p><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-en"><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-te"><strong>గమనిక:</strong> ఈ వెబ్‌సైట్ మీభూమి గురించి సమాచారాన్ని అందించడమే లక్ష్యంగా పెట్టుకుంది. మాకు ఆంధ్రప్రదేశ్ ప్రభుత్వంతో సంబంధం లేదు. ఈ వెబ్‌సైట్ ప్రజా సౌకర్యార్థం రూపొందించబడింది.</p>
+      
     <div class="mb-2">
-      <a href="https://meebhoomiap.in">Home</a> |
-      <a href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha AP</a> |
-      <a href="https://meebhoomiap.in/webland.html">Webland AP</a> |
-      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
-      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+      <a href="https://meebhoomiap.in">
+          <span class="lang-en">Home</span>
+          <span class="lang-te">హోమ్</span>
+      </a> |
+      <a href="https://meebhoomiap.in/bhunaksha.html">
+          <span class="lang-en">Bhu Naksha AP</span>
+          <span class="lang-te">భూ నక్ష AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/webland.html">
+          <span class="lang-en">Webland AP</span>
+          <span class="lang-te">వెబ్‌ల్యాండ్ AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/about-us.html">
+          <span class="lang-en">About Us</span>
+          <span class="lang-te">మా గురించి</span>
+      </a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">
+          <span class="lang-en">Privacy Policy</span>
+          <span class="lang-te">ప్రైవసీ పాలసీ</span>
+      </a>
     </div>
     <div>
       © 2026 MeeBhoomi Portal
@@ -353,9 +565,15 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    function toggleLanguage() {
+        // Toggle the class on the body
+        document.body.classList.toggle('show-telugu');
+    }
+</script>
+
 </body>
-
-
 </html>
+
 
 
