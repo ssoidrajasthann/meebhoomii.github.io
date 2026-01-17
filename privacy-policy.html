@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy</title>
+  <title>Privacy Policy / గోప్యతా విధానం</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="/favicon.png">
@@ -26,11 +26,6 @@
     .navbar-brand {
       padding-left: 10px;
     }
-    .dropdown-menu {
-      margin-left: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
 
     header a,
     footer,
@@ -48,6 +43,8 @@
     .dropdown-menu {
       background-color: #003366;
       border: none;
+      margin-left: 10px;
+      padding: 10px;
     }
 
     .dropdown-item {
@@ -62,54 +59,79 @@
       color: #ffffff;
     }
 
+    /* --- TRANSLATION BAR STYLES --- */
+    .translate-bar {
+        background-color: #e9ecef;
+        padding: 10px 0;
+        border-bottom: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    .lang-btn {
+        border: 2px solid #003366;
+        background: #ffffff;
+        color: #003366;
+        font-weight: bold;
+        padding: 6px 20px;
+        border-radius: 25px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .lang-btn:hover {
+        background-color: #003366;
+        color: white;
+    }
+
+    /* Language logic */
+    .lang-te { display: none; }
+    body.show-telugu .lang-en { display: none !important; }
+    body.show-telugu .lang-te { display: inline; }
+    body.show-telugu div.lang-te, 
+    body.show-telugu p.lang-te,
+    body.show-telugu h1.lang-te,
+    body.show-telugu h2.lang-te,
+    body.show-telugu h3.lang-te,
+    body.show-telugu ul.lang-te,
+    body.show-telugu ol.lang-te { display: block; }
+    /* ----------------------------- */
+
     /* Mobile-specific spacing */
     @media (max-width: 991.98px) {
         .navbar-brand { padding-left: 20px !important; }
         .navbar-toggler { margin-right: 15px !important; }
         .navbar-collapse { padding: 0 25px 15px; }
-        .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
     }
 
     /* Service Buttons */
     .service-btn {
-      width: 100%;
-      background-color: #003366;
-      color: #ffffff;
-      font-weight: bold;
-      border: none;
-      padding: 12px;
-      transition: 0.3s;
+        display: inline-block;
+        background-color: #003366;
+        color: #ffffff !important;
+        font-weight: bold;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: 0.3s;
+        border-radius: 5px;
+        white-space: nowrap;
     }
 
     .service-btn:hover {
-      background-color: #f39c12;
-      color: #ffffff;
-      transform: translateY(-2px);
+        background-color: #f39c12;
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
     
-   h1, h2, h3 {
-    font-weight: bold;
-    text-align: center;
-    color: #003366;
-    margin-top: 30px;
-   }
+    h1, h2, h3 {
+        font-weight: bold;
+        text-align: center;
+        color: #003366;
+        margin-top: 30px;
+    }
 
     footer { font-size: 14px; }
-    
-    /* Blog Images */
-    .blog-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-    }
-
-    .blog-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
         
     /* Data Tables */
     table {
@@ -121,7 +143,7 @@
     }
 
     th, td { border: 1px solid #ddd; padding: 12px; }
-    th { background-color: #003366; color: white; }
+    th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
   </style>
@@ -132,7 +154,8 @@
 <header class="bg-custom">
   <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
     <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
-      MeeBhoomi
+      <span class="lang-en">MeeBhoomi</span>
+      <span class="lang-te">మీభూమి</span>
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -142,35 +165,56 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Adangal Services
+            <span class="lang-en">Adangal Services</span>
+            <span class="lang-te">అడంగల్ సేవలు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Your Adangal</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village Adangal</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">
+                <span class="lang-en">Your Adangal</span>
+                <span class="lang-te">మీ అడంగల్</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">
+                <span class="lang-en">Village Adangal</span>
+                <span class="lang-te">గ్రామ అడంగల్</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            ROR 1-B Records
+            <span class="lang-en">ROR 1-B Records</span>
+            <span class="lang-te">ROR 1-B రికార్డులు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Your 1-B Record</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village 1-B</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">
+                <span class="lang-en">Your 1-B Record</span>
+                <span class="lang-te">మీ 1-B రికార్డు</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">
+                <span class="lang-en">Village 1-B</span>
+                <span class="lang-te">గ్రామ 1-B</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-             Maps & FMB
+             <span class="lang-en">Maps & FMB</span>
+             <span class="lang-te">మ్యాప్స్ & FMB</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Field Measurement Book (FMB)</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">Village Maps</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">
+                <span class="lang-en">Field Measurement Book (FMB)</span>
+                <span class="lang-te">ఫీల్డ్ మెజర్మెంట్ బుక్ (FMB)</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/">
+                <span class="lang-en">Village Maps</span>
+                <span class="lang-te">గ్రామ మ్యాప్స్</span>
+            </a></li>
           </ul>
         </li>
 
@@ -179,200 +223,473 @@
   </nav>
 </header>
 
+<div class="translate-bar">
+    <button class="lang-btn" onclick="toggleLanguage()">
+        <span class="lang-en">తెలుగులో చూడండి</span>
+        <span class="lang-te">View in English</span>
+    </button>
+</div>
+
 <main id="main-content">
 <div class="container-fluid my-4">
-  <h1>Privacy Policy</h1>
-<p>Last updated: December 24, 2025</p>
-<p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
-<p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
-<h2>Interpretation and Definitions</h2>
-<h3>Interpretation</h3>
-<p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-<h3>Definitions</h3>
-<p>For the purposes of this Privacy Policy:</p>
-<ul>
-<li>
-<p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
-</li>
-<li>
-<p><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
-</li>
-<li>
-<p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to MeeBhoomi Portal.</p>
-</li>
-<li>
-<p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p>
-</li>
-<li>
-<p><strong>Country</strong> refers to: Jammu and Kashmir,  India</p>
-</li>
-<li>
-<p><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</p>
-</li>
-<li>
-<p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
-</li>
-<li>
-<p><strong>Service</strong> refers to the Website.</p>
-</li>
-<li>
-<p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
-</li>
-<li>
-<p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
-</li>
-<li>
-<p><strong>Website</strong> refers to MeeBhoomi Portal, accessible from <a href="https://meebhoomiap.in" rel="external nofollow noopener" target="_blank">https://meebhoomiap.in</a></p>
-</li>
-<li>
-<p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+  <h1>
+      <span class="lang-en">Privacy Policy</span>
+      <span class="lang-te">గోప్యతా విధానం</span>
+  </h1>
+  <p>
+      <span class="lang-en">Last updated: December 24, 2025</span>
+      <span class="lang-te">చివరిగా నవీకరించబడింది: డిసెంబర్ 24, 2025</span>
+  </p>
+  
+  <div class="lang-en">
+    <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+    <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+  </div>
+  <div class="lang-te">
+      <p>మీరు సేవను ఉపయోగిస్తున్నప్పుడు మీ సమాచారాన్ని సేకరించడం, ఉపయోగించడం మరియు బహిర్గతం చేయడంపై మా విధానాలు మరియు విధానాలను ఈ గోప్యతా విధానం వివరిస్తుంది. అలాగే మీ గోప్యతా హక్కులు మరియు చట్టం మిమ్మల్ని ఎలా రక్షిస్తుందో కూడా ఇది తెలియజేస్తుంది.</p>
+      <p>సేవను అందించడానికి మరియు మెరుగుపరచడానికి మేము మీ వ్యక్తిగత డేటాను ఉపయోగిస్తాము. సేవను ఉపయోగించడం ద్వారా, ఈ గోప్యతా విధానానికి అనుగుణంగా సమాచారాన్ని సేకరించడానికి మరియు ఉపయోగించడానికి మీరు అంగీకరిస్తున్నారు.</p>
+  </div>
+
+  <h2>
+      <span class="lang-en">Interpretation and Definitions</span>
+      <span class="lang-te">వివరణ మరియు నిర్వచనాలు</span>
+  </h2>
+  
+  <h3>
+      <span class="lang-en">Interpretation</span>
+      <span class="lang-te">వివరణ</span>
+  </h3>
+  <p>
+      <span class="lang-en">The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</span>
+      <span class="lang-te">ప్రారంభ అక్షరాలు పెద్దబడి (Capitalized) ఉన్న పదాలు ఈ క్రింది పరిస్థితులలో నిర్వచించబడిన అర్థాలను కలిగి ఉంటాయి. ఈ క్రింది నిర్వచనాలు ఏకవచనంలో లేదా బహువచనంలో కనిపించినా ఒకే అర్థాన్ని కలిగి ఉంటాయి.</span>
+  </p>
+
+  <h3>
+      <span class="lang-en">Definitions</span>
+      <span class="lang-te">నిర్వచనాలు</span>
+  </h3>
+  <p>
+      <span class="lang-en">For the purposes of this Privacy Policy:</span>
+      <span class="lang-te">ఈ గోప్యతా విధానం ప్రయోజనాల కోసం:</span>
+  </p>
+  <ul>
+    <li>
+        <span class="lang-en"><p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p></span>
+        <span class="lang-te"><p><strong>ఖాతా (Account)</strong> అనగా మా సేవ లేదా మా సేవ యొక్క భాగాలను యాక్సెస్ చేయడానికి మీ కోసం సృష్టించబడిన ప్రత్యేక ఖాతా.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p></span>
+        <span class="lang-te"><p><strong>అనుబంధ సంస్థ (Affiliate)</strong> అనగా ఒక పార్టీని నియంత్రించే, లేదా ఒక పార్టీచే నియంత్రించబడే సంస్థ.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to MeeBhoomi Portal.</p></span>
+        <span class="lang-te"><p><strong>కంపెనీ</strong> (ఈ ఒప్పందంలో "కంపెనీ", "మేము", "మన" లేదా "మా" అని పిలుస్తారు) అనగా మీభూమి పోర్టల్.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p></span>
+        <span class="lang-te"><p><strong>కుకీలు (Cookies)</strong> అనేవి వెబ్‌సైట్ ద్వారా మీ కంప్యూటర్, మొబైల్ పరికరం లేదా ఏదైనా ఇతర పరికరంలో ఉంచబడే చిన్న ఫైళ్లు.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Country</strong> refers to: Jammu and Kashmir,  India</p></span>
+        <span class="lang-te"><p><strong>దేశం</strong> సూచించేది: జమ్మూ కాశ్మీర్, ఇండియా.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</p></span>
+        <span class="lang-te"><p><strong>పరికరం (Device)</strong> అనగా కంప్యూటర్, సెల్ ఫోన్ లేదా డిజిటల్ టాబ్లెట్ వంటి సేవను యాక్సెస్ చేయగల ఏదైనా పరికరం.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p></span>
+        <span class="lang-te"><p><strong>వ్యక్తిగత డేటా</strong> అనేది గుర్తించబడిన లేదా గుర్తించదగిన వ్యక్తికి సంబంధించిన ఏదైనా సమాచారం.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Service</strong> refers to the Website.</p></span>
+        <span class="lang-te"><p><strong>సేవ (Service)</strong> అనేది వెబ్‌సైట్‌ను సూచిస్తుంది.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p></span>
+        <span class="lang-te"><p><strong>సర్వీస్ ప్రొవైడర్</strong> అంటే కంపెనీ తరపున డేటాను ప్రాసెస్ చేసే సహజ లేదా చట్టపరమైన వ్యక్తి.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p></span>
+        <span class="lang-te"><p><strong>వినియోగ డేటా (Usage Data)</strong> అనేది స్వయంచాలకంగా సేకరించబడిన డేటా.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>Website</strong> refers to MeeBhoomi Portal, accessible from <a href="https://meebhoomiap.in" rel="external nofollow noopener" target="_blank">https://meebhoomiap.in</a></p></span>
+        <span class="lang-te"><p><strong>వెబ్‌సైట్</strong> అనేది <a href="https://meebhoomiap.in" rel="external nofollow noopener" target="_blank">https://meebhoomiap.in</a> నుండి యాక్సెస్ చేయగల మీభూమి పోర్టల్‌ను సూచిస్తుంది.</p></span>
+    </li>
+    <li>
+        <span class="lang-en"><p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p></span>
+        <span class="lang-te"><p><strong>మీరు (You)</strong> అనగా సేవను యాక్సెస్ చేస్తున్న లేదా ఉపయోగిస్తున్న వ్యక్తి.</p></span>
+    </li>
+  </ul>
+
+  <h2>
+      <span class="lang-en">Collecting and Using Your Personal Data</span>
+      <span class="lang-te">మీ వ్యక్తిగత డేటాను సేకరించడం మరియు ఉపయోగించడం</span>
+  </h2>
+  
+  <h3>
+      <span class="lang-en">Types of Data Collected</span>
+      <span class="lang-te">సేకరించబడిన డేటా రకాలు</span>
+  </h3>
+  
+  <h4>
+      <span class="lang-en">Personal Data</span>
+      <span class="lang-te">వ్యక్తిగత డేటా</span>
+  </h4>
+  <p>
+      <span class="lang-en">While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</span>
+      <span class="lang-te">మా సేవను ఉపయోగిస్తున్నప్పుడు, మిమ్మల్ని సంప్రదించడానికి లేదా గుర్తించడానికి ఉపయోగపడే నిర్దిష్ట వ్యక్తిగత గుర్తింపు సమాచారాన్ని మాకు అందించమని మేము మిమ్మల్ని కోరవచ్చు.</span>
+  </p>
+  <ul>
+    <li>
+        <span class="lang-en">Usage Data</span>
+        <span class="lang-te">వినియోగ డేటా</span>
+    </li>
+  </ul>
+
+  <h4>
+      <span class="lang-en">Usage Data</span>
+      <span class="lang-te">వినియోగ డేటా</span>
+  </h4>
+  <div class="lang-en">
+      <p>Usage Data is collected automatically when using the Service.</p>
+      <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+      <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device's unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+      <p>We may also collect information that Your browser sends whenever You visit Our Service or when You access the Service by or through a mobile device.</p>
+  </div>
+  <div class="lang-te">
+      <p>సేవను ఉపయోగిస్తున్నప్పుడు వినియోగ డేటా స్వయంచాలకంగా సేకరించబడుతుంది.</p>
+      <p>వినియోగ డేటాలో మీ పరికరం యొక్క ఇంటర్నెట్ ప్రోటోకాల్ చిరునామా (IP అడ్రస్), బ్రౌజర్ రకం, వెర్షన్, మీరు సందర్శించే మా సేవ యొక్క పేజీలు, సమయం, తేదీ మరియు ఇతర విశ్లేషణ డేటా ఉండవచ్చు.</p>
+      <p>మీరు మొబైల్ పరికరం ద్వారా సేవను యాక్సెస్ చేసినప్పుడు, మేము మీ మొబైల్ పరికరం రకం, ప్రత్యేక ID, IP చిరునామా, ఆపరేటింగ్ సిస్టమ్ మరియు ఇంటర్నెట్ బ్రౌజర్ రకం వంటి నిర్దిష్ట సమాచారాన్ని స్వయంచాలకంగా సేకరించవచ్చు.</p>
+  </div>
+
+  <h4>
+      <span class="lang-en">Tracking Technologies and Cookies</span>
+      <span class="lang-te">ట్రాకింగ్ టెక్నాలజీలు మరియు కుకీలు</span>
+  </h4>
+  
+  <p>
+      <span class="lang-en">We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies We use include beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</span>
+      <span class="lang-te">మా సేవలోని కార్యాచరణను ట్రాక్ చేయడానికి మరియు నిర్దిష్ట సమాచారాన్ని నిల్వ చేయడానికి మేము కుకీలు మరియు ఇలాంటి ట్రాకింగ్ సాంకేతికతలను ఉపయోగిస్తాము.</span>
+  </p>
+  <ul>
+    <li>
+        <span class="lang-en"><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</span>
+        <span class="lang-te"><strong>కుకీలు లేదా బ్రౌజర్ కుకీలు.</strong> కుకీ అనేది మీ పరికరంలో ఉంచబడిన చిన్న ఫైల్. మీరు అన్ని కుకీలను తిరస్కరించమని లేదా కుకీ ఎప్పుడు పంపబడుతుందో సూచించమని మీ బ్రౌజర్‌ని ఆదేశించవచ్చు.</span>
+    </li>
+    <li>
+    <strong><span class="lang-en">Web Beacons.</span><span class="lang-te">వెబ్ బీకన్లు (Web Beacons).</span></strong> 
+    <span class="lang-en">Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</span>
+    <span class="lang-te">మా సర్వీస్‌లోని కొన్ని విభాగాలు మరియు మా ఈమెయిల్‌లలో వెబ్ బీకన్లు (వీటిని క్లియర్ గిఫ్‌లు, పిక్సెల్ ట్యాగ్‌లు మరియు సింగిల్-పిక్సెల్ గిఫ్‌లు అని కూడా అంటారు) అని పిలువబడే చిన్న ఎలక్ట్రానిక్ ఫైల్‌లు ఉండవచ్చు. ఇవి కంపెనీకి, ఆ పేజీలను సందర్శించిన వినియోగదారులను లెక్కించడానికి లేదా ఈమెయిల్ తెరిచినట్లు గుర్తించడానికి మరియు ఇతర సంబంధిత వెబ్‌సైట్ గణాంకాల కోసం (ఉదాహరణకు, ఒక నిర్దిష్ట విభాగం యొక్క ప్రజాదరణను రికార్డ్ చేయడం మరియు సిస్టమ్ మరియు సర్వర్ సమగ్రతను తనిఖీ చేయడం) అనుమతిస్తాయి.</span>
 </li>
 </ul>
-<h2>Collecting and Using Your Personal Data</h2>
-<h3>Types of Data Collected</h3>
-<h4>Personal Data</h4>
-<p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
-<ul>
-<li>Usage Data</li>
-</ul>
-<h4>Usage Data</h4>
-<p>Usage Data is collected automatically when using the Service.</p>
-<p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-<p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device's unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
-<p>We may also collect information that Your browser sends whenever You visit Our Service or when You access the Service by or through a mobile device.</p>
-<h4>Tracking Technologies and Cookies</h4>
-<p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies We use include beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
-<ul>
-<li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
-<li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
-</ul>
-<p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.</p>
-<p>We use both Session and Persistent Cookies for the purposes set out below:</p>
+
+<p>
+    <span class="lang-en">Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.</span>
+    <span class="lang-te">కుకీలు "నిరంతర" (Persistent) లేదా "సెషన్" (Session) కుకీలు కావచ్చు. మీరు ఆఫ్‌లైన్‌లోకి వెళ్లినప్పుడు కూడా నిరంతర కుకీలు మీ వ్యక్తిగత కంప్యూటర్ లేదా మొబైల్ పరికరంలో ఉంటాయి, అయితే మీరు మీ వెబ్ బ్రౌజర్‌ను మూసివేసిన వెంటనే సెషన్ కుకీలు తొలగించబడతాయి.</span>
+</p>
+
+<p>
+    <span class="lang-en">We use both Session and Persistent Cookies for the purposes set out below:</span>
+    <span class="lang-te">మేము దిగువ పేర్కొన్న ప్రయోజనాల కోసం సెషన్ మరియు నిరంతర కుకీలు రెండింటినీ ఉపయోగిస్తాము:</span>
+</p>
+
 <ul>
 <li>
-<p><strong>Necessary / Essential Cookies</strong></p>
-<p>Type: Session Cookies</p>
-<p>Administered by: Us</p>
-<p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
+    <p><strong><span class="lang-en">Necessary / Essential Cookies</span><span class="lang-te">అవసరమైన / ముఖ్యమైన కుకీలు (Necessary / Essential Cookies)</span></strong></p>
+    <p><span class="lang-en">Type: Session Cookies</span><span class="lang-te">రకం: సెషన్ కుకీలు</span></p>
+    <p><span class="lang-en">Administered by: Us</span><span class="lang-te">నిర్వహణ: మా ద్వారా</span></p>
+    <p><span class="lang-en">Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</span>
+    <span class="lang-te">ప్రయోజనం: వెబ్‌సైట్ ద్వారా మీకు అందుబాటులో ఉన్న సేవలను అందించడానికి మరియు దానిలోని కొన్ని ఫీచర్లను ఉపయోగించడానికి ఇవి చాలా అవసరం. ఇవి వినియోగదారులను ధృవీకరించడానికి మరియు వినియోగదారు ఖాతాల మోసపూరిత వినియోగాన్ని నిరోధించడానికి సహాయపడతాయి. ఈ కుకీలు లేకుండా, మీరు అడిగిన సేవలు అందించబడవు.</span></p>
 </li>
+
 <li>
-<p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>
-<p>Type: Persistent Cookies</p>
-<p>Administered by: Us</p>
-<p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
+    <p><strong><span class="lang-en">Cookies Policy / Notice Acceptance Cookies</span><span class="lang-te">కుకీల విధానం / నోటీసు అంగీకార కుకీలు</span></strong></p>
+    <p><span class="lang-en">Type: Persistent Cookies</span><span class="lang-te">రకం: నిరంతర కుకీలు</span></p>
+    <p><span class="lang-en">Administered by: Us</span><span class="lang-te">నిర్వహణ: మా ద్వారా</span></p>
+    <p><span class="lang-en">Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</span>
+    <span class="lang-te">ప్రయోజనం: వెబ్‌సైట్‌లో కుకీల వినియోగాన్ని వినియోగదారులు అంగీకరించారో లేదో ఇవి గుర్తిస్తాయి.</span></p>
 </li>
+
 <li>
-<p><strong>Functionality Cookies</strong></p>
-<p>Type: Persistent Cookies</p>
-<p>Administered by: Us</p>
-<p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
+    <p><strong><span class="lang-en">Functionality Cookies</span><span class="lang-te">ఫంక్షనాలిటీ కుకీలు (Functionality Cookies)</span></strong></p>
+    <p><span class="lang-en">Type: Persistent Cookies</span><span class="lang-te">రకం: నిరంతర కుకీలు</span></p>
+    <p><span class="lang-en">Administered by: Us</span><span class="lang-te">నిర్వహణ: మా ద్వారా</span></p>
+    <p><span class="lang-en">Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</span>
+    <span class="lang-te">ప్రయోజనం: మీరు వెబ్‌సైట్‌ను ఉపయోగించినప్పుడు మీరు తీసుకునే ఎంపికలను గుర్తుంచుకోవడానికి ఈ కుకీలు మాకు అనుమతిస్తాయి, ఉదాహరణకు మీ లాగిన్ వివరాలు లేదా భాషా ప్రాధాన్యతను గుర్తుంచుకోవడం.</span></p>
 </li>
 </ul>
-<p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
-<h3>Use of Your Personal Data</h3>
-<p>The Company may use Personal Data for the following purposes:</p>
+
+<p>
+    <span class="lang-en">For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</span>
+    <span class="lang-te">మేము ఉపయోగించే కుకీల గురించి మరియు కుకీలకు సంబంధించి మీ ఎంపికల గురించి మరింత సమాచారం కోసం, దయచేసి మా కుకీల విధానాన్ని సందర్శించండి.</span>
+</p>
+
+<h3><span class="lang-en">Use of Your Personal Data</span><span class="lang-te">మీ వ్యక్తిగత డేటా ఉపయోగం</span></h3>
+
+<p><span class="lang-en">The Company may use Personal Data for the following purposes:</span><span class="lang-te">కంపెనీ వ్యక్తిగత డేటాను ఈ క్రింది ప్రయోజనాల కోసం ఉపయోగించవచ్చు:</span></p>
+
 <ul>
 <li>
-<p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
+    <p><strong><span class="lang-en">To provide and maintain our Service</span><span class="lang-te">మా సేవను అందించడానికి మరియు నిర్వహించడానికి</span></strong><span class="lang-en">, including to monitor the usage of our Service.</span><span class="lang-te">, మా సేవ వినియోగాన్ని పర్యవేక్షించడంతో సహా.</span></p>
 </li>
 <li>
-<p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p>
+    <p><strong><span class="lang-en">To manage Your Account:</span><span class="lang-te">మీ ఖాతాను నిర్వహించడానికి:</span></strong> <span class="lang-en">to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</span><span class="lang-te">సర్వీస్ యొక్క వినియోగదారుగా మీ రిజిస్ట్రేషన్‌ను నిర్వహించడానికి.</span></p>
 </li>
 <li>
-<p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p>
+    <p><strong><span class="lang-en">For the performance of a contract:</span><span class="lang-te">ఒప్పందం అమలు కోసం:</span></strong> <span class="lang-en">the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</span><span class="lang-te">మీరు కొనుగోలు చేసిన ఉత్పత్తులు లేదా సేవల కొనుగోలు ఒప్పందం యొక్క నిర్వహణ కోసం.</span></p>
 </li>
 <li>
-<p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
+    <p class="lang-en"><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
+    <p class="lang-te"><strong>మిమ్మల్ని సంప్రదించడానికి:</strong> ఇమెయిల్, టెలిఫోన్ కాల్‌లు, SMS లేదా మొబైల్ అప్లికేషన్ పుష్ నోటిఫికేషన్‌ల వంటి ఇతర ఎలక్ట్రానిక్ కమ్యూనికేషన్ రూపాల ద్వారా మిమ్మల్ని సంప్రదించడానికి. ఇది అప్‌డేట్‌లు లేదా కార్యాచరణలు, ఉత్పత్తులు లేదా ఒప్పంద సేవలకు సంబంధించిన సమాచార ప్రసారాల కోసం (భద్రతా అప్‌డేట్‌లతో సహా) అవసరమైనప్పుడు చేయబడుతుంది.</p>
 </li>
 <li>
-<p><strong>To provide You</strong> with news, special offers, and general information about other goods, services and events which We offer that are similar to those that you have already purchased or inquired about unless You have opted not to receive such information.</p>
+    <p class="lang-en"><strong>To provide You</strong> with news, special offers, and general information about other goods, services and events which We offer that are similar to those that you have already purchased or inquired about unless You have opted not to receive such information.</p>
+    <p class="lang-te"><strong>మీకు అందించడానికి:</strong> వార్తలు, ప్రత్యేక ఆఫర్‌లు మరియు మేము అందించే ఇతర వస్తువులు, సేవలు మరియు ఈవెంట్‌ల గురించి సాధారణ సమాచారాన్ని అందించడానికి. మీరు ఇప్పటికే కొనుగోలు చేసిన లేదా విచారించిన వాటికి సమానమైన వాటి గురించి, మీరు అలాంటి సమాచారాన్ని స్వీకరించకూడదని ఎంచుకుంటే తప్ప.</p>
 </li>
 <li>
-<p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
+    <p class="lang-en"><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
+    <p class="lang-te"><strong>మీ అభ్యర్థనలను నిర్వహించడానికి:</strong> మాకు వచ్చిన మీ అభ్యర్థనలను స్వీకరించడానికి మరియు నిర్వహించడానికి.</p>
 </li>
 <li>
-<p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
+    <p class="lang-en"><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
+    <p class="lang-te"><strong>వ్యాపార బదిలీల కోసం:</strong> విలీనం, ఆస్తుల అమ్మకం, పునర్వ్యవస్థీకరణ లేదా దివాలా ప్రక్రియలో భాగంగా మా ఆస్తుల బదిలీని మూల్యాంకన చేయడానికి లేదా నిర్వహించడానికి మేము మీ సమాచారాన్ని ఉపయోగించవచ్చు. ఇందులో సేవా వినియోగదారుల గురించి మా వద్ద ఉన్న వ్యక్తిగత డేటా కూడా బదిలీ చేయబడే ఆస్తులలో ఒకటిగా ఉండవచ్చు.</p>
 </li>
 <li>
-<p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
+    <p class="lang-en"><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
+    <p class="lang-te"><strong>ఇతర ప్రయోజనాల కోసం:</strong> డేటా విశ్లేషణ, వినియోగ పోకడలను గుర్తించడం, మా ప్రచారాల ప్రభావాన్ని నిర్ణయించడం మరియు మా సేవ, ఉత్పత్తులు, మార్కెటింగ్ మరియు మీ అనుభవాన్ని మెరుగుపరచడం వంటి ఇతర ప్రయోజనాల కోసం మేము మీ సమాచారాన్ని ఉపయోగించవచ్చు.</p>
 </li>
 </ul>
-<p>We may share Your personal information in the following situations:</p>
+
+<p class="lang-en">We may share Your personal information in the following situations:</p>
+<p class="lang-te">మేము ఈ క్రింది సందర్భాలలో మీ వ్యక్తిగత సమాచారాన్ని పంచుకోవచ్చు:</p>
+
 <ul>
-<li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service,  to contact You.</li>
-<li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
-<li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
-<li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
-<li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
-<li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
+    <li>
+        <span class="lang-en"><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service,  to contact You.</span>
+        <span class="lang-te"><strong>సేవా ప్రదాతలతో:</strong> మా సేవ యొక్క వినియోగాన్ని పర్యవేక్షించడానికి మరియు విశ్లేషించడానికి, మిమ్మల్ని సంప్రదించడానికి మేము సేవా ప్రదాతలతో మీ వ్యక్తిగత సమాచారాన్ని పంచుకోవచ్చు.</span>
+    </li>
+    <li>
+        <span class="lang-en"><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</span>
+        <span class="lang-te"><strong>వ్యాపార బదిలీల కోసం:</strong> ఏదైనా విలీనం, కంపెనీ ఆస్తుల విక్రయం, ఫైనాన్సింగ్ లేదా మా వ్యాపారంలో కొంత లేదా మొత్తం భాగాన్ని వేరే కంపెనీకి విక్రయించేటప్పుడు లేదా చర్చల సమయంలో మీ సమాచారాన్ని పంచుకోవచ్చు లేదా బదిలీ చేయవచ్చు.</span>
+    </li>
+    <li>
+        <span class="lang-en"><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</span>
+        <span class="lang-te"><strong>అనుబంధ సంస్థలతో:</strong> మేము మీ సమాచారాన్ని మా అనుబంధ సంస్థలతో పంచుకోవచ్చు, అప్పుడు ఆ అనుబంధ సంస్థలు ఈ గోప్యతా విధానాన్ని గౌరవించాలని మేము కోరుతాము. అనుబంధ సంస్థలలో మా మాతృ సంస్థ మరియు ఇతర అనుబంధ సంస్థలు, జాయింట్ వెంచర్ భాగస్వాములు లేదా మేము నియంత్రించే ఇతర కంపెనీలు ఉంటాయి.</span>
+    </li>
+    <li>
+        <span class="lang-en"><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</span>
+        <span class="lang-te"><strong>వ్యాపార భాగస్వాములతో:</strong> మీకు నిర్దిష్ట ఉత్పత్తులు, సేవలు లేదా ప్రమోషన్‌లను అందించడానికి మేము మా వ్యాపార భాగస్వాములతో మీ సమాచారాన్ని పంచుకోవచ్చు.</span>
+    </li>
+    <li>
+        <span class="lang-en"><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</span>
+        <span class="lang-te"><strong>ఇతర వినియోగదారులతో:</strong> మీరు వ్యక్తిగత సమాచారాన్ని పంచుకున్నప్పుడు లేదా పబ్లిక్ ఏరియాల్లో ఇతర వినియోగదారులతో ఇంటరాక్ట్ అయినప్పుడు, ఆ సమాచారాన్ని వినియోగదారులందరూ చూడవచ్చు మరియు బయట పంపిణీ చేయవచ్చు.</span>
+    </li>
+    <li>
+        <span class="lang-en"><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</span>
+        <span class="lang-te"><strong>మీ సమ్మతితో:</strong> మీ సమ్మతితో మేము ఏ ఇతర ప్రయోజనం కోసమైనా మీ వ్యక్తిగత సమాచారాన్ని వెల్లడించవచ్చు.</span>
+    </li>
 </ul>
-<h3>Retention of Your Personal Data</h3>
-<p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
-<p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer periods.</p>
-<h3>Transfer of Your Personal Data</h3>
-<p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ from those from Your jurisdiction.</p>
-<p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
-<p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
-<h3>Delete Your Personal Data</h3>
-<p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
-<p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
-<p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
-<p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
-<h3>Disclosure of Your Personal Data</h3>
-<h4>Business Transactions</h4>
-<p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
-<h4>Law enforcement</h4>
-<p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-<h4>Other legal requirements</h4>
-<p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+
+<h3 class="lang-en">Retention of Your Personal Data</h3>
+<h3 class="lang-te">మీ వ్యక్తిగత డేటా నిల్వ (Retention)</h3>
+
+<p class="lang-en">The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+<p class="lang-te">కంపెనీ మీ వ్యక్తిగత డేటాను ఈ గోప్యతా విధానంలో పేర్కొన్న ప్రయోజనాల కోసం అవసరమైనంత కాలం మాత్రమే ఉంచుకుంటుంది.చట్టపరమైన బాధ్యతలను పాటించడానికి (ఉదాహరణకు, వర్తించే చట్టాలకు అనుగుణంగా మీ డేటాను ఉంచాల్సి వస్తే), వివాదాలను పరిష్కరించడానికి మరియు మా చట్టపరమైన ఒప్పందాలు మరియు విధానాలను అమలు చేయడానికి అవసరమైన మేరకు మేము మీ డేటాను ఉంచుతాము మరియు ఉపయోగిస్తాము.</p>
+
+<p class="lang-en">The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer periods.</p>
+<p class="lang-te">కంపెనీ అంతర్గత విశ్లేషణ ప్రయోజనాల కోసం వినియోగ డేటాను కూడా ఉంచుకుంటుంది. భద్రతను బలోపేతం చేయడానికి లేదా మా సేవ యొక్క పనితీరును మెరుగుపరచడానికి ఉపయోగించినప్పుడు తప్ప, వినియోగ డేటా సాధారణంగా తక్కువ వ్యవధిలో ఉంచబడుతుంది.</p>
+
+<h3 class="lang-en">Transfer of Your Personal Data</h3>
+<h3 class="lang-te">మీ వ్యక్తిగత డేటా బదిలీ</h3>
+
+<p class="lang-en">Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ from those from Your jurisdiction.</p>
+<p class="lang-te">మీ సమాచారం (వ్యక్తిగత డేటాతో సహా) కంపెనీ కార్యాలయాల్లో మరియు ప్రాసెసింగ్‌లో పాల్గొన్న పార్టీలు ఉన్న ఇతర ప్రదేశాలలో ప్రాసెస్ చేయబడుతుంది. అంటే ఈ సమాచారం మీ రాష్ట్రం, ప్రాంతం, దేశం లేదా ఇతర ప్రభుత్వ పరిధి వెలుపల ఉన్న కంప్యూటర్‌లకు బదిలీ చేయబడవచ్చు మరియు నిర్వహించబడవచ్చు, అక్కడ డేటా రక్షణ చట్టాలు మీ పరిధిలోని చట్టాలకు భిన్నంగా ఉండవచ్చు.</p>
+
+<p class="lang-en">Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
+<p class="lang-te">ఈ గోప్యతా విధానానికి మీ సమ్మతి మరియు మీ సమాచారాన్ని సమర్పించడం ద్వారా ఆ బదిలీకి మీరు అంగీకరించినట్లు భావించబడుతుంది.</p>
+
+<p class="lang-en">The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
+<p class="lang-te">మీ డేటా సురక్షితంగా మరియు ఈ గోప్యతా విధానానికి అనుగుణంగా పరిగణించబడుతుందని నిర్ధారించడానికి కంపెనీ సహేతుకమైన చర్యలు తీసుకుంటుంది. మీ డేటా మరియు ఇతర వ్యక్తిగత సమాచారం యొక్క భద్రతతో సహా తగిన నియంత్రణలు ఉంటే తప్ప మీ వ్యక్తిగత డేటా ఏ సంస్థకు లేదా దేశానికి బదిలీ చేయబడదు.</p>
+
+<h3 class="lang-en">Delete Your Personal Data</h3>
+<h3 class="lang-te">మీ వ్యక్తిగత డేటాను తొలగించడం</h3>
+
+<p class="lang-en">You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
+<p class="lang-te">మేము సేకరించిన మీ వ్యక్తిగత డేటాను తొలగించడానికి లేదా తొలగించడంలో సహాయం కోరడానికి మీకు హక్కు ఉంది.</p>
+
+<p class="lang-en">Our Service may give You the ability to delete certain information about You from within the Service.</p>
+<p class="lang-te">మా సేవలో మీ గురించి నిర్దిష్ట సమాచారాన్ని తొలగించే అవకాశాన్ని మేము మీకు ఇవ్వవచ్చు.</p>
+
+<p class="lang-en">You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
+<p class="lang-te">మీకు ఖాతా ఉంటే, సైన్ ఇన్ చేసి ఖాతా సెట్టింగ్‌ల ద్వారా మీ సమాచారాన్ని ఎప్పుడైనా అప్‌డేట్ చేయవచ్చు, సవరించవచ్చు లేదా తొలగించవచ్చు. మీరు మాకు అందించిన వ్యక్తిగత సమాచారాన్ని యాక్సెస్ చేయడానికి, సరిచేయడానికి లేదా తొలగించడానికి మమ్మల్ని సంప్రదించవచ్చు.</p>
+
+<p class="lang-en">Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
+<p class="lang-te">అయితే, మాకు చట్టపరమైన బాధ్యత ఉన్నప్పుడు మేము నిర్దిష్ట సమాచారాన్ని ఉంచాల్సి ఉంటుందని గమనించండి.</p>
+
+<h3 class="lang-en">Disclosure of Your Personal Data</h3>
+<h3 class="lang-te">మీ వ్యక్తిగత డేటా వెల్లడి (Disclosure)</h3>
+
+<h4 class="lang-en">Business Transactions</h4>
+<h4 class="lang-te">వ్యాపార లావాదేవీలు</h4>
+
+<p class="lang-en">If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+<p class="lang-te">కంపెనీ విలీనం, సముపార్జన లేదా ఆస్తి విక్రయంలో పాల్గొంటే, మీ వ్యక్తిగత డేటా బదిలీ చేయబడవచ్చు. మీ వ్యక్తిగత డేటా బదిలీ కావడానికి మరియు వేరే గోప్యతా విధానానికి లోబడి ఉండటానికి ముందు మేము నోటీసును అందిస్తాము.</p>
+
+<h4 class="lang-en">Law enforcement</h4>
+<h4 class="lang-te">చట్ట అమలు</h4>
+
+<p class="lang-en">Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+<p class="lang-te">చట్టం ప్రకారం లేదా ప్రభుత్వ అధికారుల (కోర్టు లేదా ప్రభుత్వ సంస్థ) చెల్లుబాటు అయ్యే అభ్యర్థనలకు ప్రతిస్పందనగా అవసరమైతే కంపెనీ మీ వ్యక్తిగత డేటాను వెల్లడించవచ్చు.</p>
+
+<h4 class="lang-en">Other legal requirements</h4>
+<h4 class="lang-te">ఇతర చట్టపరమైన అవసరాలు</h4>
+
+<p class="lang-en">The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+<p class="lang-te">ఈ క్రింది చర్యలకు అవసరమని నమ్మితే కంపెనీ మీ డేటాను వెల్లడించవచ్చు:</p>
+
 <ul>
-<li>Comply with a legal obligation</li>
-<li>Protect and defend the rights or property of the Company</li>
-<li>Prevent or investigate possible wrongdoing in connection with the Service</li>
-<li>Protect the personal safety of Users of the Service or the public</li>
-<li>Protect against legal liability</li>
+    <li>
+        <span class="lang-en">Comply with a legal obligation</span>
+        <span class="lang-te">చట్టపరమైన బాధ్యతను పాటించడం</span>
+    </li>
+    <li>
+        <span class="lang-en">Protect and defend the rights or property of the Company</span>
+        <span class="lang-te">కంపెనీ హక్కులు లేదా ఆస్తిని రక్షించడం</span>
+    </li>
+    <li>
+        <span class="lang-en">Prevent or investigate possible wrongdoing in connection with the Service</span>
+        <span class="lang-te">సేవకు సంబంధించిన తప్పులను నిరోధించడం లేదా దర్యాప్తు చేయడం</span>
+    </li>
+    <li>
+        <span class="lang-en">Protect the personal safety of Users of the Service or the public</span>
+       <span class="lang-te">సేవా వినియోగదారులు లేదా ప్రజల వ్యక్తిగత భద్రతను రక్షించడం</span>
+    </li>
+    <li>
+        <span class="lang-en">Protect against legal liability</span>
+        <span class="lang-te">చట్టపరమైన బాధ్యత నుండి రక్షించడం</span>
+    </li>
 </ul>
-<h3>Security of Your Personal Data</h3>
-<p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially reasonable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-<h2>Children's Privacy</h2>
-<p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-<p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
-<h2>Links to Other Websites</h2>
-<p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
-<p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
-<h2>Changes to this Privacy Policy</h2>
-<p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
-<p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>
-<p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-<h2>Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, You can contact us:</p>
+
+<h3 class="lang-en">Security of Your Personal Data</h3>
+<h3 class="lang-te">మీ వ్యక్తిగత డేటా భద్రత</h3>
+
+<p class="lang-en">The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially reasonable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+<p class="lang-te">మీ వ్యక్తిగత డేటా భద్రత మాకు ముఖ్యం, కానీ ఇంటర్నెట్ ద్వారా ప్రసారం లేదా ఎలక్ట్రానిక్ నిల్వ ఏదీ 100% సురక్షితం కాదని గుర్తుంచుకోండి. మీ వ్యక్తిగత డేటాను రక్షించడానికి మేము వాణిజ్యపరంగా ఆమోదయోగ్యమైన మార్గాలను ఉపయోగించడానికి ప్రయత్నిస్తున్నప్పటికీ, దాని సంపూర్ణ భద్రతకు మేము హామీ ఇవ్వలేము.</p>
+
+<h2 class="lang-en">Children's Privacy</h2>
+<h2 class="lang-te">పిల్లల గోప్యత</h2>
+
+<p class="lang-en">Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
+<p class="lang-te">మా సేవ 13 సంవత్సరాల కంటే తక్కువ వయస్సు ఉన్నవారిని ఉద్దేశించినది కాదు. మేము 13 ఏళ్లలోపు వారి నుండి ఉద్దేశపూర్వకంగా వ్యక్తిగత డేటాను సేకరించము. మీ పిల్లలు మాకు డేటాను అందించారని మీకు తెలిస్తే, మమ్మల్ని సంప్రదించండి. తల్లిదండ్రుల సమ్మతి లేకుండా 13 ఏళ్లలోపు వారి నుండి డేటా సేకరించామని మాకు తెలిస్తే, ఆ సమాచారాన్ని మా సర్వర్‌ల నుండి తొలగించడానికి మేము చర్యలు తీసుకుంటాము.</p>
+
+<p class="lang-en">If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+<p class="lang-te">మేము సమ్మతిని చట్టపరమైన ప్రాతిపదికగా ఉపయోగిస్తే మరియు మీ దేశంలో తల్లిదండ్రుల సమ్మతి అవసరమైతే, మేము ఆ సమాచారాన్ని సేకరించే ముందు మీ తల్లిదండ్రుల సమ్మతిని కోరవచ్చు.</p>
+
+<h2 class="lang-en">Links to Other Websites</h2>
+<h2 class="lang-te">ఇతర వెబ్‌సైట్‌ల లింకులు</h2>
+
+<p class="lang-en">Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+<p class="lang-te">మా సేవలో మేము నిర్వహించని ఇతర వెబ్‌సైట్‌ల లింకులు ఉండవచ్చు. మీరు థర్డ్ పార్టీ లింక్‌పై క్లిక్ చేస్తే, మీరు ఆ సైట్‌కి మళ్ళించబడతారు.మీరు సందర్శించే ప్రతి సైట్ యొక్క గోప్యతా విధానాన్ని సమీక్షించాలని మేము గట్టిగా సలహా ఇస్తున్నాము.</p>
+
+<p class="lang-en">We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+<p class="lang-te">థర్డ్ పార్టీ సైట్‌లు లేదా సేవల కంటెంట్, గోప్యతా విధానాలు లేదా పద్ధతులపై మాకు ఎటువంటి నియంత్రణ లేదు మరియు బాధ్యత వహించము.</p>
+
+<h2 class="lang-en">Changes to this Privacy Policy</h2>
+<h2 class="lang-te">ఈ గోప్యతా విధానంలో మార్పులు</h2>
+
+<p class="lang-en">We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+<p class="lang-te">మేము ఎప్పటికప్పుడు మా గోప్యతా విధానాన్ని అప్‌డేట్ చేయవచ్చు. ఈ పేజీలో కొత్త గోప్యతా విధానాన్ని పోస్ట్ చేయడం ద్వారా ఏవైనా మార్పుల గురించి మీకు తెలియజేస్తాము.</p>
+
+<p class="lang-en">We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+<p class="lang-te">మార్పు అమలులోకి రావడానికి ముందు ఇమెయిల్ మరియు/లేదా మా సేవలో ప్రముఖ నోటీసు ద్వారా మీకు తెలియజేస్తాము మరియు ఈ గోప్యతా విధానం పైన ఉన్న "Last updated" తేదీని అప్‌డేట్ చేస్తాము.</p>
+
+<p class="lang-en">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+<p class="lang-te">ఏవైనా మార్పుల కోసం ఈ గోప్యతా విధానాన్ని ఎప్పటికప్పుడు సమీక్షించాలని మీకు సూచించబడింది. ఈ పేజీలో పోస్ట్ చేసినప్పుడు మార్పులు అమలులోకి వస్తాయి.</p>
+
+<h2 class="lang-en">Contact Us</h2>
+<h2 class="lang-te">మమ్మల్ని సంప్రదించండి</h2>
+
+<p class="lang-en">If you have any questions about this Privacy Policy, You can contact us:</p>
+<p class="lang-te">ఈ గోప్యతా విధానం గురించి మీకు ఏవైనా ప్రశ్నలు ఉంటే, మమ్మల్ని సంప్రదించవచ్చు:</p>
+
 <ul>
-<li>By email: meebhoomiportalhelp@gmail.com</li>
+    <li>
+        <span class="lang-en">By email: meebhoomiportalhelp@gmail.com</span>
+        <span class="lang-te">ఇమెయిల్ ద్వారా: meebhoomiportalhelp@gmail.com</span>
+    </li>
 </ul>
         
 </main>
 
 <footer class="bg-custom text-center py-3">
   <div class="container">
-      <p><strong>Disclaimer:</strong> This website amis to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <div class="lang-en">
+         <p><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for public convenience.</p>
+      </div>
+      <div class="lang-te">
+         <p><strong>నిరాకరణ:</strong> ఈ వెబ్‌సైట్ మీభూమి గురించి సమాచారాన్ని అందించడానికి ఉద్దేశించబడింది. మాకు ఆంధ్రప్రదేశ్ ప్రభుత్వంతో ఎటువంటి సంబంధం లేదు. ఈ వెబ్‌సైట్ ప్రజా సౌకర్యం కోసం సృష్టించబడింది.</p>
+      </div>
+      
     <div class="mb-2">
-      <a href="https://meebhoomiap.in">Home</a> |
-      <a href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha AP</a> |
-      <a href="https://meebhoomiap.in/webland.html">Webland AP</a> |
-      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
-      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+      <a href="https://meebhoomiap.in">
+          <span class="lang-en">Home</span>
+          <span class="lang-te">హోమ్</span>
+      </a> |
+      <a href="https://meebhoomiap.in/bhunaksha.html">
+          <span class="lang-en">Bhu Naksha AP</span>
+          <span class="lang-te">భూ నక్ష AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/webland.html">
+          <span class="lang-en">Webland AP</span>
+          <span class="lang-te">వెబ్‌ల్యాండ్ AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/about-us.html">
+          <span class="lang-en">About Us</span>
+          <span class="lang-te">మా గురించి</span>
+      </a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">
+          <span class="lang-en">Privacy Policy</span>
+          <span class="lang-te">గోప్యతా విధానం</span>
+      </a>
     </div>
     <div>
-      © 2026 MeeBhoomi Portal
+      © 2026 
+      <span class="lang-en">MeeBhoomi Portal</span>
+      <span class="lang-te">మీభూమి పోర్టల్</span>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    // 1. On Page Load: Check if the user previously selected Telugu
+    document.addEventListener("DOMContentLoaded", function() {
+        const savedLang = localStorage.getItem("languagePreference");
+        
+        // If 'telugu' was saved, apply the class immediately
+        if (savedLang === "telugu") {
+            document.body.classList.add("show-telugu");
+        }
+        // Default is English (no class added), so we don't need an 'else' block
+    });
+
+    // 2. On Button Click: Toggle the class and SAVE the preference
+    function toggleLanguage() {
+        document.body.classList.toggle('show-telugu');
+        
+        // Check if the class is now present
+        if (document.body.classList.contains('show-telugu')) {
+            // Save 'telugu' to browser storage
+            localStorage.setItem("languagePreference", "telugu");
+        } else {
+            // Save 'english' to browser storage
+            localStorage.setItem("languagePreference", "english");
+        }
+    }
+</script>
+
 </body>
-
 </html>
-
-
-
