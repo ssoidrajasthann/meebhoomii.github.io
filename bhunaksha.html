@@ -70,7 +70,7 @@
     }
 
     /* Service Buttons */
-.service-btn {
+    .service-btn {
     display: inline-block;
     background-color: #003366;
     color: #ffffff !important; /* Ensures text stays white */
@@ -130,6 +130,62 @@
     th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
+
+    /* LANGUAGE TOGGLE STYLES */
+    .lang-te { display: none; } /* Hide Telugu by default */
+    
+    /* When body has class 'show-telugu', hide English and show Telugu */
+    body.show-telugu .lang-en { display: none !important; }
+    body.show-telugu .lang-te { display: inline; }
+    body.show-telugu div.lang-te, 
+    body.show-telugu p.lang-te,
+    body.show-telugu h1.lang-te,
+    body.show-telugu h2.lang-te,
+    body.show-telugu h3.lang-te,
+    body.show-telugu ul.lang-te,
+    body.show-telugu ol.lang-te { display: block; }
+    
+    /* Title Container for positioning toggle */
+    .title-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .lang-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid #003366;
+        background: transparent;
+        color: #003366;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .lang-btn:hover {
+        background-color: #003366;
+        color: white;
+    }
+    @media (max-width: 768px) {
+        .title-container {
+            flex-direction: column;
+        }
+        .lang-btn {
+            position: relative;
+            transform: none;
+            margin-top: 10px;
+            right: auto;
+        }
+    }
+
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
      crossorigin="anonymous"></script>
@@ -140,7 +196,8 @@
 <header class="bg-custom">
   <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
     <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
-      MeeBhoomi
+      <span class="lang-en">MeeBhoomi</span>
+      <span class="lang-te">మీభూమి</span>
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -154,31 +211,52 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Adangal Services
+            <span class="lang-en">Adangal Services</span>
+            <span class="lang-te">అడంగల్ సేవలు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View Adangal</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Land Dispute</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">View Adangal</span>
+                <span class="lang-te">మీ అడంగల్</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Land Dispute</span>
+                <span class="lang-te">భూ వివాదాలు</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            ROFR 1-B Records
+            <span class="lang-en">ROFR 1-B Records</span>
+            <span class="lang-te">1-B రికార్డులు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View 1-B Record</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village ROFR</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">View 1-B Record</span>
+                <span class="lang-te">1-B రికార్డు చూడండి</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Village ROFR</span>
+                <span class="lang-te">గ్రామ 1-B</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-             Maps & FMB
+             <span class="lang-en">Maps & FMB</span>
+             <span class="lang-te">మ్యాప్స్ & FMB</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Field Measurement Book (FMB)</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village Maps</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Field Measurement Book (FMB)</span>
+                <span class="lang-te">F.M.B (భూమి కొలతలు)</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Village Maps</span>
+                <span class="lang-te">గ్రామ పటాలు</span>
+            </a></li>
           </ul>
         </li>
 
@@ -189,148 +267,269 @@
 
 <main id="main-content">
 <div class="container-fluid my-4">
-            <h1>Bhu Naksha AP: View & Download FMB Cadastral Maps Online</h1>
+    
+            <div class="title-container">
+                <h1 class="lang-en">Bhu Naksha AP: View & Download FMB Cadastral Maps Online</h1>
+                <h1 class="lang-te">భూ నక్ష AP: FMB కాడాస్ట్రల్ మ్యాప్‌లను ఆన్‌లైన్‌లో చూడండి & డౌన్‌లోడ్ చేయండి</h1>
+                
+                <button class="lang-btn" onclick="toggleLanguage()">
+                    <span class="lang-en">తెలుగులో చూడండి</span>
+                    <span class="lang-te">View in English</span>
+                </button>
+            </div>
 
             <section>
-                <p>If you own land in Andhra Pradesh, understanding your property's exact boundaries is critical. Disputes over boundaries are common, but the Andhra Pradesh government has made it easier to verify your land details online through the Bhu Naksha and Meebhoomi portals.</p>
+                <p class="lang-en">If you own land in Andhra Pradesh, understanding your property's exact boundaries is critical. Disputes over boundaries are common, but the Andhra Pradesh government has made it easier to verify your land details online through the Bhu Naksha and Meebhoomi portals.</p>
+                <p class="lang-te">ఆంధ్రప్రదేశ్‌లో మీకు భూమి ఉంటే, మీ ఆస్తి ఖచ్చితమైన సరిహద్దులను అర్థం చేసుకోవడం చాలా ముఖ్యం. సరిహద్దు వివాదాలు సాధారణం, అయితే ఆంధ్రప్రదేశ్ ప్రభుత్వం భూ నక్ష (Bhu Naksha) మరియు మీభూమి పోర్టల్‌ల ద్వారా ఆన్‌లైన్‌లో మీ భూమి వివరాలను ధృవీకరించడాన్ని సులభతరం చేసింది.</p>
                 
-                <p>One of the most important documents you can access is the <strong>FMB (Field Measurement Book)</strong>, also known as a Cadastral Map. This document provides a sketch of your land’s dimensions, protecting you from encroachment and legal issues.</p>
+                <p class="lang-en">One of the most important documents you can access is the <strong>FMB (Field Measurement Book)</strong>, also known as a Cadastral Map. This document provides a sketch of your land’s dimensions, protecting you from encroachment and legal issues.</p>
+                <p class="lang-te">మీరు పొందగలిగే అత్యంత ముఖ్యమైన పత్రాలలో ఒకటి <strong>FMB (ఫీల్డ్ మెజర్మెంట్ బుక్)</strong>, దీనిని కాడాస్ట్రల్ మ్యాప్ అని కూడా పిలుస్తారు. ఈ పత్రం మీ భూమి కొలతల స్కెచ్‌ను అందిస్తుంది, ఇది ఆక్రమణలు మరియు చట్టపరమైన సమస్యల నుండి మిమ్మల్ని కాపాడుతుంది.</p>
                 
                 <div class="highlight-box">
-                    <p>In this guide, we will explain what Bhu Naksha AP is, why you need an FMB, and the step-by-step process to download it from the comfort of your home.</p>
+                    <p class="lang-en">In this guide, we will explain what Bhu Naksha AP is, why you need an FMB, and the step-by-step process to download it from the comfort of your home.</p>
+                    <p class="lang-te">ఈ గైడ్‌లో, భూ నక్ష AP అంటే ఏమిటి, మీకు FMB ఎందుకు అవసరం మరియు ఇంటి నుండే దానిని డౌన్‌లోడ్ చేసుకునే విధానాన్ని మేము వివరిస్తాము.</p>
                 </div>
             </section>
 
             <section>
-                <h2>What is Bhu Naksha and FMB?</h2>
-                <p>Before diving into the download process, it is essential to understand the terminology used in Andhra Pradesh land records:</p>
-                <ul>
+                <h2 class="lang-en">What is Bhu Naksha and FMB?</h2>
+                <h2 class="lang-te">భూ నక్ష మరియు FMB అంటే ఏమిటి?</h2>
+                
+                <p class="lang-en">Before diving into the download process, it is essential to understand the terminology used in Andhra Pradesh land records:</p>
+                <p class="lang-te">డౌన్‌లోడ్ ప్రక్రియలోకి వెళ్లే ముందు, ఆంధ్రప్రదేశ్ భూ రికార్డులలో ఉపయోగించే పదజాలాన్ని అర్థం చేసుకోవడం అవసరం:</p>
+                
+                <ul class="lang-en">
                     <li><strong>Bhu Naksha (Cadastral Map):</strong> This is the digital map of the land. It visually represents the boundaries of a specific survey number within a village.</li>
                     <li><strong>FMB (Field Measurement Book):</strong> The FMB is a collection of sketches maintained by the Revenue Department. It records the precise measurement, boundaries, and shape of each survey number.</li>
                     <li><strong>LP Map:</strong> Layout Plan Map, often used interchangeably with FMB in urban planning contexts.</li>
                 </ul>
-                <div class="row g-3 mb-4 justify-content-center">
-    <div class="col-auto">
-        <a class="btn service-btn" href="https://bhunaksha.ap.gov.in/bhunakshalpm/28/index.jsp" target="_blank" rel="noopener noreferrer">Bhu Naksha AP</a>
-    </div>
-    <div class="col-auto">
-        <a class="btn service-btn" href="https://apsac.ap.gov.in/dashboard-staging/ap-cadastral-maps/" target="_blank" rel="noopener noreferrer">Cadastral Map AP</a>
-    </div>
-</div>
+                <ul class="lang-te">
+                    <li><strong>భూ నక్ష (కాడాస్ట్రల్ మ్యాప్):</strong> ఇది భూమి యొక్క డిజిటల్ మ్యాప్. ఇది ఒక గ్రామంలోని నిర్దిష్ట సర్వే నంబర్ యొక్క సరిహద్దులను చూపిస్తుంది.</li>
+                    <li><strong>FMB (ఫీల్డ్ మెజర్మెంట్ బుక్):</strong> FMB అనేది రెవెన్యూ శాఖ నిర్వహించే స్కెచ్‌ల సేకరణ. ఇది ప్రతి సర్వే నంబర్ యొక్క ఖచ్చితమైన కొలత, సరిహద్దులు మరియు ఆకారాన్ని నమోదు చేస్తుంది.</li>
+                    <li><strong>LP మ్యాప్:</strong> లేఅవుట్ ప్లాన్ మ్యాప్, ఇది తరచుగా పట్టణ ప్రణాళిక సందర్భాలలో FMBకి బదులుగా ఉపయోగించబడుతుంది.</li>
+                </ul>
 
-                <h3>Why do you need it?</h3>
-                <ul>
+                <div class="row g-3 mb-4 justify-content-center">
+                    <div class="col-auto">
+                        <a class="btn service-btn" href="https://bhunaksha.ap.gov.in/bhunakshalpm/28/index.jsp" target="_blank" rel="noopener noreferrer">
+                            <span class="lang-en">Bhu Naksha AP</span>
+                            <span class="lang-te">భూ నక్ష AP</span>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn service-btn" href="https://apsac.ap.gov.in/dashboard-staging/ap-cadastral-maps/" target="_blank" rel="noopener noreferrer">
+                            <span class="lang-en">Cadastral Map AP</span>
+                            <span class="lang-te">కాడాస్ట్రల్ మ్యాప్ AP</span>
+                        </a>
+                    </div>
+                </div>
+
+                <h3 class="lang-en">Why do you need it?</h3>
+                <h3 class="lang-te">మీకు ఇది ఎందుకు అవసరం?</h3>
+                <ul class="lang-en">
                     <li><strong>Resolving Boundary Disputes:</strong> Prove the exact area of your land.</li>
                     <li><strong>Property Registration:</strong> Essential during the buying or selling process.</li>
                     <li><strong>Bank Loans:</strong> Banks often require an FMB sketch to sanction home or agricultural loans.</li>
                 </ul>
+                <ul class="lang-te">
+                    <li><strong>సరిహద్దు వివాదాల పరిష్కారం:</strong> మీ భూమి యొక్క ఖచ్చితమైన విస్తీర్ణాన్ని నిరూపించడానికి.</li>
+                    <li><strong>ఆస్తి రిజిస్ట్రేషన్:</strong> కొనుగోలు లేదా అమ్మకం ప్రక్రియలో ఇది అవసరం.</li>
+                    <li><strong>బ్యాంకు రుణాలు:</strong> గృహ లేదా వ్యవసాయ రుణాలను మంజూరు చేయడానికి బ్యాంకులు తరచుగా FMB స్కెచ్‌ను అడుగుతాయి.</li>
+                </ul>
             </section>
 
             <section>
-                <h2>Method 1: How to Check FMB on the Meebhoomi Portal</h2>
-                <p>The Meebhoomi portal is the primary hub for all land records in Andhra Pradesh.</p>
+                <h2 class="lang-en">Method 1: How to Check FMB on the Meebhoomi Portal</h2>
+                <h2 class="lang-te">పద్ధతి 1: మీభూమి పోర్టల్‌లో FMBని ఎలా తనిఖీ చేయాలి</h2>
+                
+                <p class="lang-en">The Meebhoomi portal is the primary hub for all land records in Andhra Pradesh.</p>
+                <p class="lang-te">ఆంధ్రప్రదేశ్‌లోని అన్ని భూ రికార్డులకు మీభూమి పోర్టల్ ప్రధాన కేంద్రం.</p>
 
                 <div class="step-card">
-                    <h3>Step 1: Visit the Official Website</h3>
-                    <p>Go to the official Meebhoomi portal: <strong>meebhoomi.ap.gov.in</strong>.</p>
+                    <h3 class="lang-en">Step 1: Visit the Official Website</h3>
+                    <h3 class="lang-te">దశ 1: అధికారిక వెబ్‌సైట్‌ను సందర్శించండి</h3>
+                    <p class="lang-en">Go to the official Meebhoomi portal: <strong>meebhoomi.ap.gov.in</strong>.</p>
+                    <p class="lang-te">అధికారిక మీభూమి పోర్టల్‌కు వెళ్లండి: <strong>meebhoomi.ap.gov.in</strong>.</p>
                 </div>
 
                 <div class="step-card">
-                    <h3>Step 2: Select the FMB Option</h3>
-                    <p>On the homepage menu, look for the option labeled "F.M.B" or "Your LP Map / FMB". (This is usually located under the "Land Details" section).</p>
+                    <h3 class="lang-en">Step 2: Select the FMB Option</h3>
+                    <h3 class="lang-te">దశ 2: FMB ఆప్షన్‌ను ఎంచుకోండి</h3>
+                    <p class="lang-en">On the homepage menu, look for the option labeled "F.M.B" or "Your LP Map / FMB". (This is usually located under the "Land Details" section).</p>
+                    <p class="lang-te">హోమ్‌పేజీ మెనులో, "F.M.B" లేదా "మీ LP మ్యాప్ / FMB" అని ఉన్న ఆప్షన్ కోసం చూడండి. (ఇది సాధారణంగా "Land Details" విభాగం కింద ఉంటుంది).</p>
                 </div>
 
                 <div class="step-card">
-                    <h3>Step 3: Enter Location Details</h3>
-                    <p>You will be redirected to a search page. Enter the following details:</p>
-                    <ul>
+                    <h3 class="lang-en">Step 3: Enter Location Details</h3>
+                    <h3 class="lang-te">దశ 3: లొకేషన్ వివరాలను నమోదు చేయండి</h3>
+                    <p class="lang-en">You will be redirected to a search page. Enter the following details:</p>
+                    <p class="lang-te">మీరు సెర్చ్ పేజీకి మళ్లించబడతారు. కింది వివరాలను నమోదు చేయండి:</p>
+                    <ul class="lang-en">
                         <li><strong>District:</strong> Select your district.</li>
                         <li><strong>Zone (Mandal):</strong> Select your Mandal.</li>
                         <li><strong>Village:</strong> Select your specific village.</li>
                         <li><strong>Survey Number:</strong> Enter the Survey Number of your land.</li>
                     </ul>
+                    <ul class="lang-te">
+                        <li><strong>జిల్లా:</strong> మీ జిల్లాను ఎంచుకోండి.</li>
+                        <li><strong>మండలం:</strong> మీ మండలాన్ని ఎంచుకోండి.</li>
+                        <li><strong>గ్రామం:</strong> మీ గ్రామాన్ని ఎంచుకోండి.</li>
+                        <li><strong>సర్వే నంబర్:</strong> మీ భూమి సర్వే నంబర్‌ను నమోదు చేయండి.</li>
+                    </ul>
                 </div>
 
                 <div class="step-card">
-                    <h3>Step 4: Verify and Submit</h3>
-                    <p>Enter the CAPTCHA code displayed on the screen and click "Click" or "Submit."</p>
+                    <h3 class="lang-en">Step 4: Verify and Submit</h3>
+                    <h3 class="lang-te">దశ 4: వెరిఫై చేసి సబ్మిట్ చేయండి</h3>
+                    <p class="lang-en">Enter the CAPTCHA code displayed on the screen and click "Click" or "Submit."</p>
+                    <p class="lang-te">స్క్రీన్‌పై కనిపించే CAPTCHA కోడ్‌ను నమోదు చేసి "Click" లేదా "Submit" పై క్లిక్ చేయండి.</p>
                 </div>
 
                 <div class="step-card">
-                    <h3>Step 5: View and Download</h3>
-                    <p>If the data is digitized, the FMB sketch for your survey number will appear on the screen. You can right-click to save the image or use the "Print" button to save it as a PDF.</p>
-                    <p><em>Note: If you see a message saying "Data Not Found," it likely means the digital map for that specific survey number has not yet been updated in the central database. You may need to visit the local Tahsildar office.</em></p>
+                    <h3 class="lang-en">Step 5: View and Download</h3>
+                    <h3 class="lang-te">దశ 5: చూడండి మరియు డౌన్‌లోడ్ చేయండి</h3>
+                    <p class="lang-en">If the data is digitized, the FMB sketch for your survey number will appear on the screen. You can right-click to save the image or use the "Print" button to save it as a PDF.</p>
+                    <p class="lang-te">డేటా డిజిటలైజ్ చేయబడి ఉంటే, మీ సర్వే నంబర్‌కు సంబంధించిన FMB స్కెచ్ స్క్రీన్‌పై కనిపిస్తుంది. మీరు ఇమేజ్‌ను సేవ్ చేయడానికి రైట్ క్లిక్ చేయవచ్చు లేదా PDFగా సేవ్ చేయడానికి "Print" బటన్‌ను ఉపయోగించవచ్చు.</p>
+                    <p class="lang-en"><em>Note: If you see a message saying "Data Not Found," it likely means the digital map for that specific survey number has not yet been updated in the central database. You may need to visit the local Tahsildar office.</em></p>
+                    <p class="lang-te"><em>గమనిక: మీకు "Data Not Found" అనే మెసేజ్ వస్తే, ఆ నిర్దిష్ట సర్వే నంబర్‌కు సంబంధించిన డిజిటల్ మ్యాప్ ఇంకా సెంట్రల్ డేటాబేస్‌లో అప్‌డేట్ కాలేదని అర్థం. మీరు స్థానిక తహసీల్దార్ కార్యాలయాన్ని సంప్రదించాల్సి ఉంటుంది.</em></p>
                 </div>
             </section>
 
             <section>
-                <h2>Method 2: Using the Bhunaksha AP Portal</h2>
-                <p>For a more interactive map view, you can use the dedicated Bhunaksha software.</p>
-                <ol>
+                <h2 class="lang-en">Method 2: Using the Bhunaksha AP Portal</h2>
+                <h2 class="lang-te">పద్ధతి 2: భూ నక్ష AP పోర్టల్‌ను ఉపయోగించడం</h2>
+                
+                <p class="lang-en">For a more interactive map view, you can use the dedicated Bhunaksha software.</p>
+                <p class="lang-te">మరింత ఇంటరాక్టివ్ మ్యాప్ వీక్షణ కోసం, మీరు ప్రత్యేకమైన భూ నక్ష సాఫ్ట్‌వేర్‌ను ఉపయోగించవచ్చు.</p>
+                
+                <ol class="lang-en">
                     <li><strong>Go to the Portal:</strong> Visit <strong>bhunaksha.ap.gov.in</strong>.</li>
                     <li><strong>Select Geography:</strong> On the left sidebar, use the dropdown menus to select your District, Mandal, and Village.</li>
                     <li><strong>Locate Your Plot:</strong> The map of the entire village will load on the right. You can zoom in to find your specific plot, or type your Survey Number in the search box.</li>
                     <li><strong>View Map Report:</strong> Click on your plot. A "Plot Info" box will appear. Click on "Map Report" to generate a printable PDF version of the cadastral map (Single Plot or All Plots).</li>
                 </ol>
+                <ol class="lang-te">
+                    <li><strong>పోర్టల్‌కు వెళ్లండి:</strong> <strong>bhunaksha.ap.gov.in</strong> ని సందర్శించండి.</li>
+                    <li><strong>ప్రాంతాన్ని ఎంచుకోండి:</strong> ఎడమ వైపున, డ్రాప్‌డౌన్ మెనులను ఉపయోగించి మీ జిల్లా, మండలం మరియు గ్రామాన్ని ఎంచుకోండి.</li>
+                    <li><strong>మీ ప్లాట్‌ను గుర్తించండి:</strong> కుడి వైపున మొత్తం గ్రామం మ్యాప్ లోడ్ అవుతుంది. మీ ప్లాట్‌ను కనుగొనడానికి మీరు జూమ్ చేయవచ్చు లేదా సెర్చ్ బాక్స్‌లో మీ సర్వే నంబర్‌ను టైప్ చేయవచ్చు.</li>
+                    <li><strong>మ్యాప్ రిపోర్ట్ చూడండి:</strong> మీ ప్లాట్‌పై క్లిక్ చేయండి. "Plot Info" బాక్స్ కనిపిస్తుంది. మ్యాప్ యొక్క ప్రింటబుల్ PDF వెర్షన్‌ను పొందడానికి "Map Report" పై క్లిక్ చేయండి.</li>
+                </ol>
             </section>
 
             <section>
-                <h2>Vital Differences: FMB vs. Adangal vs. 1-B</h2>
-                <p>Many landowners confuse these three documents. Here is a quick comparison:</p>
-                <table>
+                <h2 class="lang-en">Vital Differences: FMB vs. Adangal vs. 1-B</h2>
+                <h2 class="lang-te">ముఖ్యమైన తేడాలు: FMB vs అడంగల్ vs 1-B</h2>
+                
+                <p class="lang-en">Many landowners confuse these three documents. Here is a quick comparison:</p>
+                <p class="lang-te">చాలా మంది భూ యజమానులు ఈ మూడు పత్రాల మధ్య గందరగోళానికి గురవుతారు. ఇక్కడ వాటి పోలిక చూడండి:</p>
+                
+                <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Document</th>
-                            <th>Purpose</th>
+                            <th>
+                                <span class="lang-en">Document</span>
+                                <span class="lang-te">పత్రం</span>
+                            </th>
+                            <th>
+                                <span class="lang-en">Purpose</span>
+                                <span class="lang-te">ఉద్దేశ్యం</span>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>FMB (Field Measurement Book)</strong></td>
-                            <td>Shows the sketch/map, dimensions, and boundaries of the land.</td>
+                            <td><strong>
+                                <span class="lang-en">FMB (Field Measurement Book)</span>
+                                <span class="lang-te">FMB (ఫీల్డ్ మెజర్మెంట్ బుక్)</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">Shows the sketch/map, dimensions, and boundaries of the land.</span>
+                                <span class="lang-te">భూమి యొక్క స్కెచ్/మ్యాప్, కొలతలు మరియు సరిహద్దులను చూపుతుంది.</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><strong>Adangal (Pahani)</strong></td>
-                            <td>Shows cultivation details, crops grown, soil type, and current enjoyer of the land.</td>
+                            <td><strong>
+                                <span class="lang-en">Adangal (Pahani)</span>
+                                <span class="lang-te">అడంగల్ (పహాణీ)</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">Shows cultivation details, crops grown, soil type, and current enjoyer of the land.</span>
+                                <span class="lang-te">సాగు వివరాలు, పండించిన పంటలు, మట్టి రకం మరియు ప్రస్తుత భూమి అనుభవదారుని వివరాలు చూపుతుంది.</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><strong>ROR (1-B)</strong></td>
-                            <td>Shows the legal ownership history and rights. This is your main title deed proof.</td>
+                            <td><strong>
+                                <span class="lang-en">ROR (1-B)</span>
+                                <span class="lang-te">ROR (1-B)</span>
+                            </strong></td>
+                            <td>
+                                <span class="lang-en">Shows the legal ownership history and rights. This is your main title deed proof.</span>
+                                <span class="lang-te">చట్టపరమైన యాజమాన్య చరిత్ర మరియు హక్కులను చూపుతుంది. ఇది మీ ప్రధాన హక్కు పత్రం (Title Deed).</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
             <section>
-                <h2>Frequently Asked Questions (FAQ)</h2>
+                <h2 class="lang-en">Frequently Asked Questions (FAQ)</h2>
+                <h2 class="lang-te">తరచుగా అడిగే ప్రశ్నలు (FAQ)</h2>
                 
                 <div>
-                    <div><strong>Q: Is the online FMB copy valid for court cases?</strong></div>
-                    <div>A: The online copy is generally for information purposes only. For legal court cases, you typically need a "Certified Copy" (CC) issued and signed by the Tahsildar or a competent revenue officer.</div>
-                </div>
+                    <div class="mb-3">
+                        <div class="lang-en"><strong>Q: Is the online FMB copy valid for court cases?</strong></div>
+                        <div class="lang-te"><strong>ప్ర: ఆన్‌లైన్ FMB కాపీ కోర్టు కేసులకు చెల్లుతుందా?</strong></div>
+                        
+                        <div class="lang-en">A: The online copy is generally for information purposes only. For legal court cases, you typically need a "Certified Copy" (CC) issued and signed by the Tahsildar or a competent revenue officer.</div>
+                        <div class="lang-te">జ: ఆన్‌లైన్ కాపీ సాధారణంగా సమాచారం కోసం మాత్రమే. కోర్టు కేసుల కోసం, మీకు తహసీల్దార్ లేదా సంబంధిత రెవెన్యూ అధికారి సంతకం చేసిన "సర్టిఫైడ్ కాపీ" (CC) అవసరం.</div>
+                    </div>
 
-                <div>
-                    <div><strong>Q: Can I check FMB without a Survey Number?</strong></div>
-                    <div>A: No, the Survey Number is mandatory to fetch the specific map. If you don't know it, you can search your name in the "Adangal" section on Meebhoomi to find your corresponding Survey Number first.</div>
-                </div>
+                    <div class="mb-3">
+                        <div class="lang-en"><strong>Q: Can I check FMB without a Survey Number?</strong></div>
+                        <div class="lang-te"><strong>ప్ర: సర్వే నంబర్ లేకుండా నేను FMBని తనిఖీ చేయవచ్చా?</strong></div>
+                        
+                        <div class="lang-en">A: No, the Survey Number is mandatory to fetch the specific map. If you don't know it, you can search your name in the "Adangal" section on Meebhoomi to find your corresponding Survey Number first.</div>
+                        <div class="lang-te">జ: లేదు, నిర్దిష్ట మ్యాప్‌ను పొందడానికి సర్వే నంబర్ తప్పనిసరి. మీకు అది తెలియకపోతే, మీభూమిలో "అడంగల్" విభాగంలో మీ పేరును సెర్చ్ చేసి ముందుగా మీ సర్వే నంబర్‌ను తెలుసుకోవచ్చు.</div>
+                    </div>
 
-                <div>
-                    <div><strong>Q: Why is my FMB sketch missing online?</strong></div>
-                    <div>A: While AP has digitized most records, some older records or recently sub-divided survey numbers might pending digitization. In such cases, apply for a manual copy at your nearest MeeSeva center.</div>
+                    <div class="mb-3">
+                        <div class="lang-en"><strong>Q: Why is my FMB sketch missing online?</strong></div>
+                        <div class="lang-te"><strong>ప్ర: ఆన్‌లైన్‌లో నా FMB స్కెచ్ ఎందుకు కనిపించడం లేదు?</strong></div>
+                        
+                        <div class="lang-en">A: While AP has digitized most records, some older records or recently sub-divided survey numbers might pending digitization. In such cases, apply for a manual copy at your nearest MeeSeva center.</div>
+                        <div class="lang-te">జ: AP చాలా రికార్డులను డిజిటలైజ్ చేసినప్పటికీ, కొన్ని పాత రికార్డులు లేదా ఇటీవల సబ్-డివైడ్ చేసిన సర్వే నంబర్ల డిజిటలైజేషన్ పెండింగ్‌లో ఉండవచ్చు. అటువంటి సందర్భాలలో, మీ సమీపంలోని మీసేవా కేంద్రంలో మాన్యువల్ కాపీ కోసం దరఖాస్తు చేసుకోండి.</div>
+                    </div>
                 </div>
             </section>
     </div>
 </main>
 
-    <footer class="bg-custom text-center py-3">
+<footer class="bg-custom text-center py-3">
   <div class="container">
-      <p><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-en"><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-te"><strong>గమనిక:</strong> ఈ వెబ్‌సైట్ మీభూమి గురించి సమాచారాన్ని అందించడమే లక్ష్యంగా పెట్టుకుంది. మాకు ఆంధ్రప్రదేశ్ ప్రభుత్వంతో సంబంధం లేదు. ఈ వెబ్‌సైట్ ప్రజా సౌకర్యార్థం రూపొందించబడింది.</p>
+      
     <div class="mb-2">
-      <a href="https://meebhoomiap.in">Home</a> |
-      <a href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha AP</a> |
-      <a href="https://meebhoomiap.in/webland.html">Webland AP</a> |
-      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
-      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+      <a href="https://meebhoomiap.in">
+          <span class="lang-en">Home</span>
+          <span class="lang-te">హోమ్</span>
+      </a> |
+      <a href="https://meebhoomiap.in/bhunaksha.html">
+          <span class="lang-en">Bhu Naksha AP</span>
+          <span class="lang-te">భూ నక్ష AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/webland.html">
+          <span class="lang-en">Webland AP</span>
+          <span class="lang-te">వెబ్‌ల్యాండ్ AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/about-us.html">
+          <span class="lang-en">About Us</span>
+          <span class="lang-te">మా గురించి</span>
+      </a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">
+          <span class="lang-en">Privacy Policy</span>
+          <span class="lang-te">ప్రైవసీ పాలసీ</span>
+      </a>
     </div>
     <div>
       © 2026 MeeBhoomi Portal
@@ -340,9 +539,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    function toggleLanguage() {
+        // Toggle the class on the body
+        document.body.classList.toggle('show-telugu');
+    }
+</script>
+
 </body>
-
-
 </html>
-
-
