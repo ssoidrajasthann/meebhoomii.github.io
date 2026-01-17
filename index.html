@@ -128,6 +128,60 @@
     th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
+
+    /* LANGUAGE TOGGLE STYLES */
+    .lang-te { display: none; } /* Hide Telugu by default */
+    
+    /* When body has class 'show-telugu', hide English and show Telugu */
+    body.show-telugu .lang-en { display: none !important; }
+    body.show-telugu .lang-te { display: inline; }
+    body.show-telugu div.lang-te, 
+    body.show-telugu p.lang-te,
+    body.show-telugu h1.lang-te,
+    body.show-telugu h2.lang-te,
+    body.show-telugu h3.lang-te,
+    body.show-telugu ul.lang-te { display: block; }
+    
+    /* Title Container for positioning toggle */
+    .title-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .lang-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid #003366;
+        background: transparent;
+        color: #003366;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .lang-btn:hover {
+        background-color: #003366;
+        color: white;
+    }
+    @media (max-width: 768px) {
+        .title-container {
+            flex-direction: column;
+        }
+        .lang-btn {
+            position: relative;
+            transform: none;
+            margin-top: 10px;
+            right: auto;
+        }
+    }
+
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
      crossorigin="anonymous"></script>
@@ -138,7 +192,8 @@
 <header class="bg-custom">
   <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
     <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="https://meebhoomiap.in">
-      MeeBhoomi
+      <span class="lang-en">MeeBhoomi</span>
+      <span class="lang-te">మీభూమి</span>
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -152,31 +207,52 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            Adangal Services
+            <span class="lang-en">Adangal Services</span>
+            <span class="lang-te">అడంగల్ సేవలు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View Adangal</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Land Dispute</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">View Adangal</span>
+                <span class="lang-te">మీ అడంగల్</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Land Dispute</span>
+                <span class="lang-te">భూ వివాదాలు</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-            ROFR 1-B Records
+            <span class="lang-en">ROFR 1-B Records</span>
+            <span class="lang-te">1-B రికార్డులు</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View 1-B Record</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village ROFR</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">View 1-B Record</span>
+                <span class="lang-te">1-B రికార్డు చూడండి</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Village ROFR</span>
+                <span class="lang-te">గ్రామ 1-B</span>
+            </a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-bold text-white" href="#" role="button" data-bs-toggle="dropdown">
-             Maps & FMB
+             <span class="lang-en">Maps & FMB</span>
+             <span class="lang-te">మ్యాప్స్ & FMB</span>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Field Measurement Book (FMB)</a></li>
-            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Village Maps</a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Field Measurement Book (FMB)</span>
+                <span class="lang-te">F.M.B (భూమి కొలతలు)</span>
+            </a></li>
+            <li><a class="dropdown-item" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Village Maps</span>
+                <span class="lang-te">గ్రామ పటాలు</span>
+            </a></li>
           </ul>
         </li>
 
@@ -188,77 +264,182 @@
 <main id="main-content">
 <div class="container-fluid my-4">
 
-  <h1>MeeBhoomi</h1>
-  <p>
+  <div class="title-container">
+      <h1>
+          <span class="lang-en">MeeBhoomi</span>
+          <span class="lang-te">మీభూమి (MeeBhoomi)</span>
+      </h1>
+      <button class="lang-btn" onclick="toggleLanguage()">
+          <span class="lang-en">తెలుగులో చూడండి</span> <span class="lang-te">View in English</span> </button>
+  </div>
+
+  <p class="lang-en">
     <strong>MeeBhoomi</strong> (translating to "Your Land") is the official digital land records repository launched by the Government of Andhra Pradesh in June 2015. 
     It serves as a transparent interface for citizens to access critical documents like the <strong>Adangal</strong> and <strong>Record of Rights (1-B)</strong> without visiting the Tahsildar's office.
   </p>
- <p>
-    The portal digitizes land data across all 26 districts of Andhra Pradesh, allowing landowners to verify ownership details, check crop data, and even link their Aadhaar numbers to their survey numbers for added security.
-   
+  <p class="lang-te">
+    <strong>మీభూమి (MeeBhoomi)</strong> అనేది ఆంధ్రప్రదేశ్ ప్రభుత్వం 2015 జూన్‌లో ప్రారంభించిన అధికారిక డిజిటల్ భూ రికార్డుల పోర్టల్. 
+    ఇది పౌరులు తహసీల్దార్ కార్యాలయానికి వెళ్లాల్సిన అవసరం లేకుండా <strong>అడంగల్</strong> మరియు <strong>రికార్డ్ ఆఫ్ రైట్స్ (1-B)</strong> వంటి కీలక పత్రాలను పొందడానికి ఒక పారదర్శక వేదికగా పనిచేస్తుంది.
   </p>
 
- <h2 id="dashboard" class="mb-4" style="padding-top: 60px; margin-top: -30px;">Online Services Dashboard</h2>
+ <p class="lang-en">
+    The portal digitizes land data across all 26 districts of Andhra Pradesh, allowing landowners to verify ownership details, check crop data, and even link their Aadhaar numbers to their survey numbers for added security.
+  </p>
+  <p class="lang-te">
+    ఈ పోర్టల్ ఆంధ్రప్రదేశ్‌లోని మొత్తం 26 జిల్లాల భూమి డేటాను డిజిటలైజ్ చేస్తుంది. దీని ద్వారా భూ యజమానులు తమ యాజమాన్య వివరాలను ధృవీకరించుకోవచ్చు, పంట వివరాలను తనిఖీ చేయవచ్చు మరియు భద్రత కోసం తమ ఆధార్ నంబర్‌ను సర్వే నంబర్‌తో లింక్ చేయవచ్చు.
+  </p>
+
+ <h2 id="dashboard" class="mb-4" style="padding-top: 60px; margin-top: -30px;">
+     <span class="lang-en">Online Services Dashboard</span>
+     <span class="lang-te">ఆన్‌లైన్ సేవల డ్యాష్‌బోర్డ్</span>
+ </h2>
+
   <div class="row g-3 mb-4">
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">MeeBhoomi Portal</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View Adangal</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">View 1-B (ROFR)</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">FMB (Village Map)</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">Aadhaar Linking</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomi.ap.gov.in/VAdangal/PPRequest" target="_blank" rel="noopener noreferrer">View Passbook</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha</a></div>
-    <div class="col-md-4 col-6"><a class="btn service-btn" href="https://meebhoomiap.in/webland.html">Webland</a></div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">MeeBhoomi Portal</span>
+            <span class="lang-te">మీభూమి పోర్టల్</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">View Adangal</span>
+            <span class="lang-te">అడంగల్ చూడండి</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">View 1-B (ROFR)</span>
+            <span class="lang-te">1-B రికార్డు (ROFR)</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">FMB (Village Map)</span>
+            <span class="lang-te">FMB (గ్రామ పటం)</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomi.ap.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">Aadhaar Linking</span>
+            <span class="lang-te">ఆధార్ లింకింగ్</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomi.ap.gov.in/VAdangal/PPRequest" target="_blank" rel="noopener noreferrer">
+            <span class="lang-en">View Passbook</span>
+            <span class="lang-te">పాస్‌బుక్ చూడండి</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomiap.in/bhunaksha.html">
+            <span class="lang-en">Bhu Naksha</span>
+            <span class="lang-te">భూ నక్ష</span>
+        </a>
+    </div>
+    <div class="col-md-4 col-6">
+        <a class="btn service-btn" href="https://meebhoomiap.in/webland.html">
+            <span class="lang-en">Webland</span>
+            <span class="lang-te">వెబ్‌ల్యాండ్</span>
+        </a>
+    </div>
  </div>
     
  <table>
       <thead>
         <tr>
-          <th width="30%">Feature</th>
-          <th>Details</th>
+          <th width="30%">
+              <span class="lang-en">Feature</span>
+              <span class="lang-te">లక్షణం</span>
+          </th>
+          <th>
+              <span class="lang-en">Details</span>
+              <span class="lang-te">వివరాలు</span>
+          </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Portal Name</strong></td>
-          <td>MeeBhoomi AP (మీభూಮಿ)</td>
+          <td><strong>
+              <span class="lang-en">Portal Name</span>
+              <span class="lang-te">పోర్టల్ పేరు</span>
+          </strong></td>
+          <td>MeeBhoomi AP (మీభూమి)</td>
         </tr>
         <tr>
-          <td><strong>Managed By</strong></td>
-          <td>Department of Revenue, Govt of Andhra Pradesh</td>
-        </tr>
-        <tr>
-          <td><strong>Core Documents</strong></td>
-          <td>Adangal (Pahani), ROR 1-B, FMB</td>
-        </tr>
-        <tr>
-          <td><strong>Languages</strong></td>
-          <td>Telugu & English</td>
-        </tr>
-        <tr>
-          <td><strong>Key Services</strong></td>
+          <td><strong>
+              <span class="lang-en">Managed By</span>
+              <span class="lang-te">నిర్వహణ</span>
+          </strong></td>
           <td>
-             <ul style="margin: 0; padding-left: 20px;">
-              <li>Electronic Passbook Download</li>
-              <li>Village Map Viewing</li>
-              <li>Aadhaar Seeding Status</li>
-              <li>Land Conversion Status</li>
-            </ul>
+              <span class="lang-en">Department of Revenue, Govt of Andhra Pradesh</span>
+              <span class="lang-te">రెవెన్యూ శాఖ, ఆంధ్రప్రదేశ్ ప్రభుత్వం</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>
+              <span class="lang-en">Core Documents</span>
+              <span class="lang-te">ప్రధాన పత్రాలు</span>
+          </strong></td>
+          <td>
+              <span class="lang-en">Adangal (Pahani), ROR 1-B, FMB</span>
+              <span class="lang-te">అడంగల్ (పహానీ), ROR 1-B, FMB</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>
+              <span class="lang-en">Languages</span>
+              <span class="lang-te">భాషలు</span>
+          </strong></td>
+          <td>
+              <span class="lang-en">Telugu & English</span>
+              <span class="lang-te">తెలుగు & ఇంగ్లీష్</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>
+              <span class="lang-en">Key Services</span>
+              <span class="lang-te">ప్రధాన సేవలు</span>
+          </strong></td>
+          <td>
+             <ul style="margin: 0; padding-left: 20px;" class="lang-en">
+               <li>Electronic Passbook Download</li>
+               <li>Village Map Viewing</li>
+               <li>Aadhaar Seeding Status</li>
+               <li>Land Conversion Status</li>
+             </ul>
+             <ul style="margin: 0; padding-left: 20px;" class="lang-te">
+               <li>ఎలక్ట్రానిక్ పాస్‌బుక్ డౌన్‌లోడ్</li>
+               <li>గ్రామ పటం వీక్షణ</li>
+               <li>ఆధార్ సీడింగ్ స్థితి</li>
+               <li>భూ మార్పిడి స్థితి</li>
+             </ul>
           </td>
         </tr>
           <tr>
-          <td><strong>Official URL</strong></td>
+          <td><strong>
+              <span class="lang-en">Official URL</span>
+              <span class="lang-te">అధికారిక వెబ్‌సైట్</span>
+          </strong></td>
           <td><a href="http://meebhoomi.ap.gov.in" target="_blank">meebhoomi.ap.gov.in</a></td>
         </tr>
       </tbody>
     </table>
   
   
-<h1>Understanding Key MeeBhoomi Documents</h1>
+<h1 class="lang-en">Understanding Key MeeBhoomi Documents</h1>
+<h1 class="lang-te">మీభూమి పత్రాలను అర్థం చేసుకోవడం</h1>
 
-<h3>1. What is Adangal (Pahani)?</h3>
-<p>
+<h3 class="lang-en">1. What is Adangal (Pahani)?</h3>
+<h3 class="lang-te">1. అడంగల్ (పహానీ) అంటే ఏమిటి?</h3>
+
+<p class="lang-en">
     The <strong>Adangal</strong> (also known as Pahani in other states) is the primary land record maintained by the Village Revenue Officer. It contains:
 </p>
+<p class="lang-te">
+    <strong>అడంగల్</strong> (దీనిని పహానీ అని కూడా అంటారు) అనేది గ్రామ రెవెన్యూ అధికారి నిర్వహించే ప్రాథమిక భూ రికార్డు. ఇందులో ఈ వివరాలు ఉంటాయి:
+</p>
+
 <div class="blog-image">
     <img 
   src="adangal.webp" 
@@ -268,17 +449,30 @@
   width="388" 
   height="220">
 </div>
-<ul>
+
+<ul class="lang-en">
   <li><strong>Owner Details:</strong> Name of the landholder.</li>
   <li><strong>Land Type:</strong> Classification of soil and land nature (Wet/Dry).</li>
   <li><strong>Cultivation:</strong> Crops grown, water sources, and yield estimation.</li>
   <li><strong>Liabilities:</strong> Details of existing loans or mortgages on the land.</li>
 </ul>
+<ul class="lang-te">
+  <li><strong>యజమాని వివరాలు:</strong> భూమి కలిగి ఉన్న వ్యక్తి పేరు.</li>
+  <li><strong>భూమి రకం:</strong> నేల మరియు భూమి స్వభావం (మెట్ట/మాగాణి).</li>
+  <li><strong>సాగు వివరాలు:</strong> పండించిన పంటలు, నీటి వనరులు మరియు దిగుబడి అంచనా.</li>
+  <li><strong>అప్పులు:</strong> భూమిపై ఉన్న రుణాలు లేదా తాకట్టు వివరాలు.</li>
+</ul>
 
-<h3>2. What is ROR 1-B?</h3>
-<p>
+<h3 class="lang-en">2. What is ROR 1-B?</h3>
+<h3 class="lang-te">2. 1-B రికార్డు అంటే ఏమిటి?</h3>
+
+<p class="lang-en">
     The <strong>Record of Rights (1-B)</strong> is the legal proof of land ownership. Unlike the Adangal which focuses on cultivation, the 1-B is strictly an ownership title record used for:
 </p>
+<p class="lang-te">
+    <strong>రికార్డ్ ఆఫ్ రైట్స్ (1-B)</strong> అనేది భూ యాజమాన్యానికి చట్టపరమైన ఆధారం. అడంగల్ సాగుపై దృష్టి సారిస్తే, 1-B పూర్తిగా యాజమాన్య హక్కుల రికార్డు. ఇది దీనికి ఉపయోగపడుతుంది:
+</p>
+
 <div class="blog-image">
     <img 
   src="ror.webp" 
@@ -288,17 +482,29 @@
   width="388" 
   height="220">
 </div>
-<ul>
+<ul class="lang-en">
   <li>Obtaining bank loans.</li>
   <li>Property registration and sales.</li>
   <li>Legal disputes in court.</li>
 </ul>
+<ul class="lang-te">
+  <li>బ్యాంకు రుణాలు పొందడానికి.</li>
+  <li>ఆస్తి రిజిస్ట్రేషన్ మరియు అమ్మకాలకు.</li>
+  <li>కోర్టులో న్యాయపరమైన వివాదాలకు.</li>
+</ul>
 
-<h3>3. Field Measurement Book (FMB)</h3>
-<p>
+<h3 class="lang-en">3. Field Measurement Book (FMB)</h3>
+<h3 class="lang-te">3. ఫీల్డ్ మెజర్‌మెంట్ బుక్ (FMB)</h3>
+
+<p class="lang-en">
     The FMB contains the sketch of land boundaries as per official survey records.
     It is crucial for resolving boundary disputes between neighbors. The MeeBhoomi portal allows you to download these sketches digitally.
 </p>
+<p class="lang-te">
+    FMB లో అధికారిక సర్వే రికార్డుల ప్రకారం భూమి సరిహద్దుల స్కెచ్ ఉంటుంది.
+    పొరుగువారి మధ్య సరిహద్దు వివాదాలను పరిష్కరించడంలో ఇది కీలకం. మీభూమి పోర్టల్ ద్వారా మీరు ఈ స్కెచ్‌లను డౌన్‌లోడ్ చేసుకోవచ్చు.
+</p>
+
 <div class="blog-image">
     <img 
   src="Field.webp" 
@@ -309,10 +515,16 @@
   height="220">
 </div>
 
-<h2>How to Download Your Adangal Online</h2>
-<p>
+<h2 class="lang-en">How to Download Your Adangal Online</h2>
+<h2 class="lang-te">ఆన్‌లైన్‌లో అడంగల్ డౌన్‌లోడ్ చేయడం ఎలా?</h2>
+
+<p class="lang-en">
     Follow these steps to view your land details on the official portal:
 </p>
+<p class="lang-te">
+    అధికారిక పోర్టల్‌లో మీ భూమి వివరాలను చూడటానికి ఈ దశలను అనుసరించండి:
+</p>
+
 <div class="blog-image">
     <img 
   src="downloadadangal.webp" 
@@ -322,7 +534,8 @@
   width="388" 
   height="220">
 </div>
-<ol>
+
+<ol class="lang-en">
   <li><strong>Visit the Portal:</strong> Go to <a href="http://meebhoomi.ap.gov.in">meebhoomi.ap.gov.in</a>.</li>
   <li><strong>Select 'Adangal':</strong> In the menu, choose "Your Adangal" (Personal) or "Village Adangal" (Public).</li>
   
@@ -337,11 +550,31 @@
   </li>
   <li><strong>Verify & Submit:</strong> Enter the Captcha code and click "Click" to generate the report.</li>
 </ol>
+<ol class="lang-te">
+  <li><strong>పోర్టల్‌ను సందర్శించండి:</strong> <a href="http://meebhoomi.ap.gov.in">meebhoomi.ap.gov.in</a> కు వెళ్లండి.</li>
+  <li><strong>'అడంగల్' ఎంచుకోండి:</strong> మెనూలో "మీ అడంగల్" లేదా "గ్రామ అడంగల్" ఎంచుకోండి.</li>
+  <li><strong>లొకేషన్ వివరాలు:</strong> మీ జిల్లా, మండలం మరియు గ్రామాన్ని ఎంచుకోండి.</li>
+  <li><strong>సెర్చ్ పద్ధతి:</strong> మీరు వీటి ద్వారా వెతకవచ్చు:
+    <ul style="list-style-type: disc;">
+        <li>సర్వే నంబర్</li>
+        <li>ఖాతా నంబర్</li>
+        <li>ఆధార్ నంబర్</li>
+        <li>పట్టాదారు పేరు</li>
+    </ul>
+  </li>
+  <li><strong>సబ్మిట్ చేయండి:</strong> క్యాప్చా కోడ్ నమోదు చేసి "Click" పై నొక్కండి.</li>
+</ol>
 
-<h2>How to Link Aadhaar with Land Records</h2>
-<p>
+<h2 class="lang-en">How to Link Aadhaar with Land Records</h2>
+<h2 class="lang-te">భూ రికార్డులతో ఆధార్ లింక్ చేయడం ఎలా?</h2>
+
+<p class="lang-en">
     Linking Aadhaar prevents fraudulent transactions. To check your status:
 </p>
+<p class="lang-te">
+    ఆధార్ లింకింగ్ మోసపూరిత లావాదేవీలను నిరోధిస్తుంది. మీ స్టేటస్ తనిఖీ చేయడానికి:
+</p>
+
 <div class="blog-image">
     <img 
   src="aadhaar.webp" 
@@ -351,95 +584,193 @@
   width="388" 
   height="220">
 </div>
-<ol>
+
+<ol class="lang-en">
   <li>Go to the "Aadhaar/Other Identities" menu.</li>
   <li>Select "Aadhaar Linking".</li>
   <li>Enter the District, Zone, Village, and Account Number.</li>
   <li>The system will display if your KYC is completed or pending.</li>
 </ol>
-  <h2>How to Find Your Survey Number Without Physical Documents</h2>
-<p>
-    If you have misplaced your original land papers, you can still identify your Survey Number using the portal's built-in search tools.
-</p>
+<ol class="lang-te">
+  <li>"Aadhaar/Other Identities" మెనూకు వెళ్లండి.</li>
+  <li>"Aadhaar Linking" ఎంచుకోండి.</li>
+  <li>జిల్లా, మండలం, గ్రామం మరియు ఖాతా నంబర్‌ను నమోదు చేయండి.</li>
+  <li>మీ KYC పూర్తయిందా లేదా పెండింగ్‌లో ఉందా అని సిస్టమ్ చూపిస్తుంది.</li>
+</ol>
 
-<h3>1. Search by Name (Pattadar Name)</h3>
-<p>This method is ideal if you are certain of the name registered in the revenue records:</p>
-<ul>
+  <h2 class="lang-en">How to Find Your Survey Number Without Physical Documents</h2>
+  <h2 class="lang-te">పత్రాలు లేకుండా మీ సర్వే నంబర్‌ను కనుగొనడం ఎలా?</h2>
+  
+  <p class="lang-en">If you have misplaced your original land papers, you can still identify your Survey Number using the portal's built-in search tools.</p>
+  <p class="lang-te">మీ ఒరిజినల్ భూమి పత్రాలు పోయినట్లయితే, పోర్టల్ సెర్చ్ టూల్స్ ఉపయోగించి మీ సర్వే నంబర్‌ను కనుగొనవచ్చు.</p>
+
+<h3 class="lang-en">1. Search by Name (Pattadar Name)</h3>
+<h3 class="lang-te">1. పేరు ద్వారా వెతకడం (పట్టాదారు పేరు)</h3>
+
+<p class="lang-en">This method is ideal if you are certain of the name registered in the revenue records:</p>
+<p class="lang-te">రెవెన్యూ రికార్డుల్లో నమోదైన పేరు మీకు ఖచ్చితంగా తెలిస్తే ఈ పద్ధతి సరైనది:</p>
+
+<ul class="lang-en">
     <li><strong>Access the Search:</strong> Go to the Adangal or 1-B section of the MeeBhoomi site.</li>
     <li><strong>Select "Pattadar Name":</strong> Instead of inputting a number, select the "Pattadar Name" (పట్టాదారు పేరు) radio button.</li>
     <li><strong>Refine Your Search:</strong> Enter the owner’s name.</li>
     <li><strong>Expert Tip:</strong> Revenue records often use initials or surnames differently. If the full name doesn't work, try searching with just the surname to find a list of all family holdings in that village.</li>
     <li><strong>Locate Results:</strong> A list will populate showing the names of owners along with their associated Survey Numbers and Khata Numbers.</li>
 </ul>
+<ul class="lang-te">
+    <li><strong>సెర్చ్ ఓపెన్ చేయండి:</strong> మీభూమి సైట్‌లోని అడంగల్ లేదా 1-B విభాగంకి వెళ్లండి.</li>
+    <li><strong>"పట్టాదారు పేరు" ఎంచుకోండి:</strong> నంబర్‌కు బదులుగా "పట్టాదారు పేరు" ఆప్షన్ ఎంచుకోండి.</li>
+    <li><strong>సెర్చ్ చేయండి:</strong> యజమాని పేరు నమోదు చేయండి.</li>
+    <li><strong>చిట్కా:</strong> రికార్డుల్లో ఇంటి పేర్లు లేదా ఇనిషియల్స్ వేరుగా ఉండవచ్చు. పూర్తి పేరు పని చేయకపోతే, కేవలం ఇంటి పేరుతో ప్రయత్నించండి.</li>
+    <li><strong>ఫలితాలు:</strong> యజమానుల పేర్లు, వాటికి సంబంధించిన సర్వే నంబర్లు మరియు ఖాతా నంబర్ల జాబితా వస్తుంది.</li>
+</ul>
 
-<h3>2. Using the "Village Map" (Visual Search)</h3>
-<p>If text-based searches fail, a visual "Cadastral Map" can help you identify your land based on its physical location:</p>
-<ul>
+<h3 class="lang-en">2. Using the "Village Map" (Visual Search)</h3>
+<h3 class="lang-te">2. "గ్రామ పటం" ఉపయోగించి (విజువల్ సెర్చ్)</h3>
+
+<p class="lang-en">If text-based searches fail, a visual "Cadastral Map" can help you identify your land based on its physical location:</p>
+<p class="lang-te">టెక్స్ట్ సెర్చ్ పని చేయకపోతే, మీ భూమి ఉన్న లొకేషన్ ఆధారంగా మ్యాప్ ద్వారా కనుగొనవచ్చు:</p>
+
+<ul class="lang-en">
     <li><strong>Open Village Maps:</strong> Click on the "Village Map" (గ్రామ పటం) icon on the home page.</li>
     <li><strong>Navigate to Your Area:</strong> Input your location details to load the village map.</li>
     <li><strong>Identify by Landmarks:</strong> Use recognizable features like village roads, irrigation canals, or the position of neighboring plots to find your land on the map.</li>
     <li><strong>Read the Survey ID:</strong> Every demarcated boundary box on the map contains a number. This number is your Survey Number.</li>
 </ul>
+<ul class="lang-te">
+    <li><strong>గ్రామ పటం తెరవండి:</strong> హోమ్ పేజీలోని "Village Map" (గ్రామ పటం) పై క్లిక్ చేయండి.</li>
+    <li><strong>మీ ప్రాంతానికి వెళ్లండి:</strong> మీ గ్రామం వివరాలను నమోదు చేసి మ్యాప్ లోడ్ చేయండి.</li>
+    <li><strong>గుర్తులు చూడండి:</strong> రోడ్లు, కాలువలు లేదా పొరుగు పొలాలను చూసి మీ భూమిని గుర్తించండి.</li>
+    <li><strong>సర్వే ID చూడండి:</strong> మ్యాప్‌లోని ప్రతి బాక్స్‌లో ఒక నంబర్ ఉంటుంది. అదే మీ సర్వే నంబర్.</li>
+</ul>
 
-<h3>3. Using the BhuNaksha Portal</h3>
-<p>The BhuNaksha AP tool provides a sophisticated way to view land records overlaid on satellite imagery:</p>
-<ul>
+<h3 class="lang-en">3. Using the BhuNaksha Portal</h3>
+<h3 class="lang-te">3. భూనక్ష పోర్టల్ ఉపయోగించి</h3>
+
+<p class="lang-en">The BhuNaksha AP tool provides a sophisticated way to view land records overlaid on satellite imagery:</p>
+<p class="lang-te">BhuNaksha AP టూల్ ద్వారా మీరు శాటిలైట్ మ్యాప్‌లో భూమి రికార్డులను చూడవచ్చు:</p>
+
+<ul class="lang-en">
     <li><strong>Satellite Overlay:</strong> This tool allows you to see actual trees, fences, and buildings on your property via a Google Maps-style view.</li>
     <li><strong>Coordinate Identification:</strong> By clicking on the specific physical area of your land on the satellite map, the system will automatically pull up the official Survey Number and owner details associated with those geographic coordinates.</li>
 </ul>
+<ul class="lang-te">
+    <li><strong>శాటిలైట్ వ్యూ:</strong> గూగుల్ మ్యాప్స్ లాగా మీ పొలంలోని చెట్లు, కంచెలు మరియు భవనాలను చూడవచ్చు.</li>
+    <li><strong>గుర్తింపు:</strong> శాటిలైట్ మ్యాప్‌లో మీ భూమిపై క్లిక్ చేస్తే, దానికి సంబంధించిన సర్వే నంబర్ మరియు యజమాని వివరాలు ఆటోమేటిక్‌గా వస్తాయి.</li>
+</ul>
 
-  <h2>Official Authority Directory</h2>
-    <p>If your inquiry requires official administrative action rather than general information, you should contact the following authorities directly:</p>
+  <h2 class="lang-en">Official Authority Directory</h2>
+  <h2 class="lang-te">అధికారుల వివరాలు</h2>
+
+    <p class="lang-en">If your inquiry requires official administrative action rather than general information, you should contact the following authorities directly:</p>
+    <p class="lang-te">మీ సమస్యకు సాధారణ సమాచారం కాకుండా, అధికారిక చర్య అవసరమైతే, ఈ క్రింది అధికారులను సంప్రదించండి:</p>
     
     <table>
+        <thead>
         <tr>
-            <th>Type of Inquiry</th>
-            <th>Contact Authority</th>
+            <th>
+                <span class="lang-en">Type of Inquiry</span>
+                <span class="lang-te">సమస్య రకం</span>
+            </th>
+            <th>
+                <span class="lang-en">Contact Authority</span>
+                <span class="lang-te">ఎవరిని సంప్రదించాలి</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <span class="lang-en">Correction in Land Records</span>
+                <span class="lang-te">భూ రికార్డుల్లో సవరణలు</span>
+            </td>
+            <td>
+                <span class="lang-en">Mandal Revenue Officer (MRO) / Local Tahsildar Office</span>
+                <span class="lang-te">మండల రెవెన్యూ అధికారి (MRO) / తహసీల్దార్ కార్యాలయం</span>
+            </td>
         </tr>
         <tr>
-            <td>Correction in Land Records</td>
-            <td>Mandal Revenue Officer (MRO) / Local Tahsildar Office</td>
+            <td>
+                <span class="lang-en">Aadhaar Seeding Issues</span>
+                <span class="lang-te">ఆధార్ సీడింగ్ సమస్యలు</span>
+            </td>
+            <td>
+                <span class="lang-en">Village Revenue Officer (VRO) at your local Grama Sachivalayam</span>
+                <span class="lang-te">మీ గ్రామ సచివాలయంలోని VRO</span>
+            </td>
         </tr>
         <tr>
-            <td>Aadhaar Seeding Issues</td>
-            <td>Village Revenue Officer (VRO) at your local Grama Sachivalayam</td>
+            <td>
+                <span class="lang-en">Land Conversion (NALA)</span>
+                <span class="lang-te">భూ మార్పిడి (NALA)</span>
+            </td>
+            <td>
+                <span class="lang-en">Revenue Divisional Officer (RDO)</span>
+                <span class="lang-te">రెవెన్యూ డివిజనల్ అధికారి (RDO)</span>
+            </td>
         </tr>
         <tr>
-            <td>Land Conversion (NALA)</td>
-            <td>Revenue Divisional Officer (RDO) </td>
-        </tr>
-        <tr>
-          <td>Official Technical Support</td>
+          <td>
+              <span class="lang-en">Official Technical Support</span>
+              <span class="lang-te">సాంకేతిక సహాయం</span>
+          </td>
             <td><a href="mailto:dir-itc@ap.gov.in">dir-itc@ap.gov.in</a></td>
         </tr>
+        </tbody>
     </table>
 
-<h2>Frequently Asked Questions (FAQ)</h2>
+<h2 class="lang-en">Frequently Asked Questions (FAQ)</h2>
+<h2 class="lang-te">తరచుగా అడిగే ప్రశ్నలు (FAQ)</h2>
 
-<p><strong>What is the difference between Adangal and 1-B?</strong><br>
+<p class="lang-en"><strong>What is the difference between Adangal and 1-B?</strong><br>
 Adangal provides cultivation and land nature details, while 1-B acts as the legal title deed proving ownership.</p>
+<p class="lang-te"><strong>అడంగల్ మరియు 1-B మధ్య తేడా ఏమిటి?</strong><br>
+అడంగల్ అనేది సాగు మరియు భూమి స్వభావం వివరాలను ఇస్తుంది. 1-B అనేది యాజమాన్యాన్ని నిరూపించే చట్టపరమైన పత్రం.</p>
 
-<p><strong>Can I use the downloaded Adangal for bank loans?</strong><br>
+<p class="lang-en"><strong>Can I use the downloaded Adangal for bank loans?</strong><br>
 Yes, the electronically signed Adangal and 1-B records from MeeBhoomi are valid for loan processing and official verification.</p>
+<p class="lang-te"><strong>డౌన్‌లోడ్ చేసిన అడంగల్‌ను బ్యాంకు రుణాలకు వాడవచ్చా?</strong><br>
+అవును, మీభూమి నుండి తీసుకున్న ఎలక్ట్రానిక్ సంతకం కలిగిన అడంగల్ మరియు 1-B రికార్డులు రుణాలకు చెల్లుతాయి.</p>
 
-<p><strong>How do I fix errors in my land records?</strong><br>
+<p class="lang-en"><strong>How do I fix errors in my land records?</strong><br>
 You can file a complaint directly on the portal under the "Complaints" section or visit the nearest MeeSeva center to request a correction.</p>
+<p class="lang-te"><strong>భూ రికార్డుల్లో తప్పులను ఎలా సరిదిద్దుకోవాలి?</strong><br>
+మీరు పోర్టల్‌లోని "Complaints" విభాగంలో ఫిర్యాదు చేయవచ్చు లేదా సవరణ కోసం దగ్గరలోని మీసేవా (MeeSeva) కేంద్రాన్ని సందర్శించవచ్చు.</p>
 
-<p><strong>Is the FMB sketch available for all villages?</strong><br>
+<p class="lang-en"><strong>Is the FMB sketch available for all villages?</strong><br>
 FMB sketches are being digitized progressively. If your village map is not available online, you must visit the Mandal Revenue Office (MRO).</p>
+<p class="lang-te"><strong>అన్ని గ్రామాలకు FMB స్కెచ్ అందుబాటులో ఉందా?</strong><br>
+FMB స్కెచ్‌లు క్రమంగా డిజిటలైజ్ చేయబడుతున్నాయి. మీ గ్రామ పటం ఆన్‌లైన్‌లో లేకపోతే, మీరు MRO కార్యాలయాన్ని సంప్రదించాలి.</p>
 
 </div>
 </main>
 
 <footer class="bg-custom text-center py-3">
   <div class="container">
-      <p><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-en"><strong>Disclaimer:</strong> This website aims to provide information about Meebhoomi. We are not affiliated with the Government of Andhra Pradesh. This website is created for the public convienience.</p>
+      <p class="lang-te"><strong>గమనిక:</strong> ఈ వెబ్‌సైట్ మీభూమి గురించి సమాచారాన్ని అందించడమే లక్ష్యంగా పెట్టుకుంది. మాకు ఆంధ్రప్రదేశ్ ప్రభుత్వంతో సంబంధం లేదు. ఈ వెబ్‌సైట్ ప్రజా సౌకర్యార్థం రూపొందించబడింది.</p>
+      
     <div class="mb-2">
-      <a href="https://meebhoomiap.in">Home</a> |
-      <a href="https://meebhoomiap.in/bhunaksha.html">Bhu Naksha AP</a> |
-      <a href="https://meebhoomiap.in/webland.html">Webland AP</a> |
-      <a href="https://meebhoomiap.in/about-us.html">About Us</a> |
-      <a href="https://meebhoomiap.in/privacy-policy.html">Privacy Policy</a>
+      <a href="https://meebhoomiap.in">
+          <span class="lang-en">Home</span>
+          <span class="lang-te">హోమ్</span>
+      </a> |
+      <a href="https://meebhoomiap.in/bhunaksha.html">
+          <span class="lang-en">Bhu Naksha AP</span>
+          <span class="lang-te">భూ నక్ష AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/webland.html">
+          <span class="lang-en">Webland AP</span>
+          <span class="lang-te">వెబ్‌ల్యాండ్ AP</span>
+      </a> |
+      <a href="https://meebhoomiap.in/about-us.html">
+          <span class="lang-en">About Us</span>
+          <span class="lang-te">మా గురించి</span>
+      </a> |
+      <a href="https://meebhoomiap.in/privacy-policy.html">
+          <span class="lang-en">Privacy Policy</span>
+          <span class="lang-te">ప్రైవసీ పాలసీ</span>
+      </a>
     </div>
     <div>
       © 2026 MeeBhoomi Portal
@@ -449,40 +780,12 @@ FMB sketches are being digitized progressively. If your village map is not avail
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    function toggleLanguage() {
+        // Toggle the class on the body
+        document.body.classList.toggle('show-telugu');
+    }
+</script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
