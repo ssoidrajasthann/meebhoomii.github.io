@@ -502,9 +502,29 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+    // 1. On Page Load: Check if the user previously selected Telugu
+    document.addEventListener("DOMContentLoaded", function() {
+        const savedLang = localStorage.getItem("languagePreference");
+        
+        // If 'telugu' was saved, apply the class immediately
+        if (savedLang === "telugu") {
+            document.body.classList.add("show-telugu");
+        }
+        // Default is English (no class added), so we don't need an 'else' block
+    });
+
+    // 2. On Button Click: Toggle the class and SAVE the preference
     function toggleLanguage() {
-        // Toggle the class on the body
         document.body.classList.toggle('show-telugu');
+        
+        // Check if the class is now present
+        if (document.body.classList.contains('show-telugu')) {
+            // Save 'telugu' to browser storage
+            localStorage.setItem("languagePreference", "telugu");
+        } else {
+            // Save 'english' to browser storage
+            localStorage.setItem("languagePreference", "english");
+        }
     }
 </script>
 
