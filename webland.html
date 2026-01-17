@@ -25,11 +25,6 @@
     .navbar-brand {
       padding-left: 10px;
     }
-    .dropdown-menu {
-      margin-left: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
 
     header a,
     footer,
@@ -47,6 +42,8 @@
     .dropdown-menu {
       background-color: #003366;
       border: none;
+      margin-left: 10px;
+      padding: 10px;
     }
 
     .dropdown-item {
@@ -61,61 +58,79 @@
       color: #ffffff;
     }
 
+    /* --- TRANSLATION BAR STYLES --- */
+    .translate-bar {
+        background-color: #e9ecef;
+        padding: 10px 0;
+        border-bottom: 1px solid #dee2e6;
+        text-align: center;
+    }
+
+    .lang-btn {
+        border: 2px solid #003366;
+        background: #ffffff;
+        color: #003366;
+        font-weight: bold;
+        padding: 6px 20px;
+        border-radius: 25px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .lang-btn:hover {
+        background-color: #003366;
+        color: white;
+    }
+
+    /* Language logic */
+    .lang-te { display: none; }
+    body.show-telugu .lang-en { display: none !important; }
+    body.show-telugu .lang-te { display: inline; }
+    body.show-telugu div.lang-te, 
+    body.show-telugu p.lang-te,
+    body.show-telugu h1.lang-te,
+    body.show-telugu h2.lang-te,
+    body.show-telugu h3.lang-te,
+    body.show-telugu ul.lang-te,
+    body.show-telugu ol.lang-te { display: block; }
+    /* ----------------------------- */
+
     /* Mobile-specific spacing */
     @media (max-width: 991.98px) {
         .navbar-brand { padding-left: 20px !important; }
         .navbar-toggler { margin-right: 15px !important; }
         .navbar-collapse { padding: 0 25px 15px; }
-        .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
     }
 
     /* Service Buttons */
     .service-btn {
-    display: inline-block;
-    background-color: #003366;
-    color: #ffffff !important; /* Ensures text stays white */
-    font-weight: bold;
-    border: none;
-    padding: 15px 30px;        /* Increased size */
-    font-size: 1.1rem;         /* Slightly larger text */
-    text-decoration: none;     /* Removes underline */
-    transition: 0.3s;
-    border-radius: 5px;        /* Optional: adds slight curve */
-    white-space: nowrap;       /* Keeps text on one line */
-}
+        display: inline-block;
+        background-color: #003366;
+        color: #ffffff !important;
+        font-weight: bold;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: 0.3s;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
 
-.service-btn:hover {
-    background-color: #f39c12;
-    color: #ffffff !important;
-    text-decoration: none;     /* Keeps underline off on hover */
-    transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
+    .service-btn:hover {
+        background-color: #f39c12;
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
     
-   h1, h2, h3 {
-    font-weight: bold;
-    text-align: center;
-    color: #003366;
-    margin-top: 30px;
-   }
+    h1, h2, h3 {
+        font-weight: bold;
+        text-align: center;
+        color: #003366;
+        margin-top: 30px;
+    }
 
     footer { font-size: 14px; }
-    
-    /* Blog Images */
-    .blog-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-    }
-
-    .blog-image img {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
         
     /* Data Tables */
     table {
@@ -130,62 +145,6 @@
     th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
-
-    /* LANGUAGE TOGGLE STYLES */
-    .lang-te { display: none; } /* Hide Telugu by default */
-    
-    /* When body has class 'show-telugu', hide English and show Telugu */
-    body.show-telugu .lang-en { display: none !important; }
-    body.show-telugu .lang-te { display: inline; }
-    body.show-telugu div.lang-te, 
-    body.show-telugu p.lang-te,
-    body.show-telugu h1.lang-te,
-    body.show-telugu h2.lang-te,
-    body.show-telugu h3.lang-te,
-    body.show-telugu ul.lang-te,
-    body.show-telugu ol.lang-te { display: block; }
-    
-    /* Title Container for positioning toggle */
-    .title-container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-    }
-    
-    .lang-btn {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        border: 2px solid #003366;
-        background: transparent;
-        color: #003366;
-        font-weight: bold;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .lang-btn:hover {
-        background-color: #003366;
-        color: white;
-    }
-    @media (max-width: 768px) {
-        .title-container {
-            flex-direction: column;
-        }
-        .lang-btn {
-            position: relative;
-            transform: none;
-            margin-top: 10px;
-            right: auto;
-        }
-    }
-
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
      crossorigin="anonymous"></script>
@@ -264,6 +223,12 @@
     </div>
   </nav>
 </header>
+  <div class="translate-bar">
+    <button class="lang-btn" onclick="toggleLanguage()">
+        <span class="lang-en">తెలుగులో చూడండి</span>
+        <span class="lang-te">View in English</span>
+    </button>
+</div>
 
 <main id="main-content">
 <div class="container-fluid my-4">
@@ -272,10 +237,7 @@
         <h1 class="lang-en">Webland AP : Land Records Management in Andhra Pradesh</h1>
         <h1 class="lang-te">వెబ్‌ల్యాండ్ AP: ఆంధ్రప్రదేశ్‌లో భూ రికార్డుల నిర్వహణ</h1>
         
-        <button class="lang-btn" onclick="toggleLanguage()">
-            <span class="lang-en">తెలుగులో చూడండి</span>
-            <span class="lang-te">View in English</span>
-        </button>
+
     </div>
             
             <p class="lang-en">When searching for land records in Andhra Pradesh, you will often hear two names: <strong>Meebhoomi</strong> and <strong>Webland</strong>. While Meebhoomi is famous among the general public, Webland AP is the silent engine running the entire system.</p>
@@ -574,6 +536,7 @@
 
 </body>
 </html>
+
 
 
 
