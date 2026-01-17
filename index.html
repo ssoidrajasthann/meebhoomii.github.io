@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+      
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -29,6 +31,13 @@
     .navbar-brand {
       padding-left: 10px;
     }
+    .dropdown-menu {
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #003366;
+      border: none;
+    }
 
     header a,
     footer,
@@ -40,14 +49,6 @@
 
     footer a:hover {
       text-decoration: underline;
-    }
-
-    /* Dropdown menu fix */
-    .dropdown-menu {
-      background-color: #003366;
-      border: none;
-      margin-left: 10px;
-      padding: 10px;
     }
 
     .dropdown-item {
@@ -62,7 +63,7 @@
       color: #ffffff;
     }
 
-    /* --- TRANSLATION BAR STYLES --- */
+    /* --- NEW TRANSLATE BAR STYLES --- */
     .translate-bar {
         background-color: #e9ecef;
         padding: 10px 0;
@@ -81,13 +82,15 @@
         cursor: pointer;
         transition: 0.3s;
     }
+
     .lang-btn:hover {
         background-color: #003366;
         color: white;
     }
 
-    /* Language logic */
-    .lang-te { display: none; }
+    /* LANGUAGE TOGGLE LOGIC */
+    .lang-te { display: none; } 
+    
     body.show-telugu .lang-en { display: none !important; }
     body.show-telugu .lang-te { display: inline; }
     body.show-telugu div.lang-te, 
@@ -104,37 +107,55 @@
         .navbar-brand { padding-left: 20px !important; }
         .navbar-toggler { margin-right: 15px !important; }
         .navbar-collapse { padding: 0 25px 15px; }
+        .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
     }
 
     /* Service Buttons */
     .service-btn {
-        display: inline-block;
-        background-color: #003366;
-        color: #ffffff !important;
-        font-weight: bold;
-        border: none;
-        padding: 15px 30px;
-        font-size: 1.1rem;
-        text-decoration: none;
-        transition: 0.3s;
-        border-radius: 5px;
-        white-space: nowrap;
+      display: inline-block;
+      background-color: #003366;
+      color: #ffffff !important;
+      font-weight: bold;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: 0.3s;
+      border-radius: 5px;
+      white-space: nowrap;
     }
 
     .service-btn:hover {
-        background-color: #f39c12;
-        transform: translateY(-4px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      background-color: #f39c12;
+      color: #ffffff !important;
+      transform: translateY(-4px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
     
     h1, h2, h3 {
-        font-weight: bold;
-        text-align: center;
-        color: #003366;
-        margin-top: 30px;
+     font-weight: bold;
+     text-align: center;
+     color: #003366;
+     margin-top: 30px;
     }
 
     footer { font-size: 14px; }
+    
+    /* Blog Images */
+    .blog-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .blog-image img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
         
     /* Data Tables */
     table {
@@ -149,7 +170,7 @@
     th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
-  </style>
+</style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
      crossorigin="anonymous"></script>
 </head>
@@ -227,15 +248,15 @@
     </div>
   </nav>
 </header>
-
-<main id="main-content">
-<div class="container-fluid my-4">
   <div class="translate-bar">
     <button class="lang-btn" onclick="toggleLanguage()">
         <span class="lang-en">తెలుగులో చూడండి</span>
         <span class="lang-te">View in English</span>
     </button>
 </div>
+
+<main id="main-content">
+<div class="container-fluid my-4">
 
   <div class="title-container">
       <h1>
@@ -760,4 +781,3 @@ FMB స్కెచ్‌లు క్రమంగా డిజిటలైజ�
 
 </body>
 </html>
-
